@@ -1,11 +1,11 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, avoid_unused_constructor_parameters
 
 part of wyd_core;
 
 const double _kSpacing = 10;
 
 class HSpace extends StatelessWidget {
-  HSpace(this.spacing, {super.key});
+  HSpace(double? spacing, {super.key});
 
   double? spacing = _kSpacing;
 
@@ -18,14 +18,14 @@ class HSpace extends StatelessWidget {
 }
 
 class VSpace extends StatelessWidget {
-  VSpace(this.spacing, {super.key});
+  VSpace(double? spacing, {super.key});
 
   double? spacing = _kSpacing;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: spacing,
+      height: spacing ?? _kSpacing,
     );
   }
 }
