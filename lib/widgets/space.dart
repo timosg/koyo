@@ -2,30 +2,17 @@
 
 part of wyd_core;
 
-const double _kSpacing = 10;
+class Space extends StatelessWidget {
+  Space({super.key, this.h, this.w});
 
-class HSpace extends StatelessWidget {
-  HSpace({super.key, this.spacing});
-
-  double? spacing = _kSpacing;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: spacing,
-    );
-  }
-}
-
-class VSpace extends StatelessWidget {
-  VSpace({super.key, this.spacing});
-
-  double? spacing = _kSpacing;
+  double? h;
+  double? w;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: spacing ?? _kSpacing,
+      height: h,
+      width: w,
     );
   }
 }
