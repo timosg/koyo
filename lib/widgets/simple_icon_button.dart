@@ -6,7 +6,7 @@ class SimpleIconButton extends StatelessWidget {
     super.key,
     // Custom
     this.icon,
-    this.scale,
+    this.scale = 0.7,
     // InkWell
     this.onTap,
     this.onTapUp,
@@ -35,7 +35,7 @@ class SimpleIconButton extends StatelessWidget {
 
   // Custom
   Icon? icon;
-  double? scale = 0.7;
+  double scale;
   // InkWell
   void Function()? onTap;
   void Function(TapUpDetails)? onTapUp;
