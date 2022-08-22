@@ -7,7 +7,7 @@ const double _kSpacing = 10;
 class HSpace extends StatelessWidget {
   HSpace(this.spacing, {super.key});
 
-  double spacing = _kSpacing;
+  double? spacing = _kSpacing;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class HSpace extends StatelessWidget {
 class VSpace extends StatelessWidget {
   VSpace(this.spacing, {super.key});
 
-  double spacing = _kSpacing;
+  double? spacing = _kSpacing;
 
   @override
   Widget build(BuildContext context) {
