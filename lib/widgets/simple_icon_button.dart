@@ -68,6 +68,7 @@ class SimpleIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final iconTheme = theme.iconTheme;
+    final defaultIconSize = iconTheme.size ?? 24.0;
 
     return Transform.scale(
       scale: scale,
@@ -103,7 +104,7 @@ class SimpleIconButton extends StatelessWidget {
                   key: icon!.key,
                   icon!.icon,
                   size: icon!.size ??
-                      (iconTheme.size ?? 24.0) + (scale * (1.0 - scale)),
+                      defaultIconSize + (defaultIconSize * (1.0 - scale)),
                   color: icon!.color,
                   semanticLabel: icon!.semanticLabel,
                   textDirection: icon!.textDirection,
