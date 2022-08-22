@@ -5,7 +5,7 @@ part of wyd_core;
 const double _kSpacing = 10;
 
 class HSpace extends StatelessWidget {
-  HSpace(double? spacing, {super.key});
+  HSpace({super.key, this.spacing});
 
   double? spacing = _kSpacing;
 
@@ -18,7 +18,7 @@ class HSpace extends StatelessWidget {
 }
 
 class VSpace extends StatelessWidget {
-  VSpace(double? spacing, {super.key});
+  VSpace({super.key, this.spacing});
 
   double? spacing = _kSpacing;
 
