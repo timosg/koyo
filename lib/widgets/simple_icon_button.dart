@@ -6,6 +6,7 @@ class SimpleIconButton extends StatelessWidget {
     super.key,
     // Custom
     this.icon,
+    this.iconMargin,
     this.scale = 0.7,
     // InkWell
     this.onTap,
@@ -35,6 +36,7 @@ class SimpleIconButton extends StatelessWidget {
 
   // Custom
   Icon? icon;
+  EdgeInsets? iconMargin;
   double scale;
   // InkWell
   void Function()? onTap;
@@ -71,15 +73,19 @@ class SimpleIconButton extends StatelessWidget {
       scale: scale,
       child: InkWell(
         onTap: onTap,
+        customBorder: const CircleBorder(),
         child: icon != null
-            ? Icon(
-                key: icon!.key,
-                icon!.icon,
-                size: icon!.size ?? defaultIconSize,
-                color: icon!.color,
-                semanticLabel: icon!.semanticLabel,
-                textDirection: icon!.textDirection,
-                shadows: icon!.shadows,
+            ? Container(
+                margin: iconMargin,
+                child: Icon(
+                  key: icon!.key,
+                  icon!.icon,
+                  size: icon!.size ?? defaultIconSize,
+                  color: icon!.color,
+                  semanticLabel: icon!.semanticLabel,
+                  textDirection: icon!.textDirection,
+                  shadows: icon!.shadows,
+                ),
               )
             : null,
       ),
