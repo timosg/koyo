@@ -1,7 +1,4 @@
-library wyd_core;
-
-import 'dart:io' show Platform;
-import 'package:flutter/material.dart';
+part of wyd_core;
 
 // ignore: must_be_immutable
 class LoadingIndicator extends StatelessWidget {

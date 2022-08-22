@@ -1,8 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-library wyd_core;
-
-import 'package:flutter/material.dart';
+part of wyd_core;
 
 const double _kSpacing = 10;
 

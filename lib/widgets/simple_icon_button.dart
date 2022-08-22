@@ -1,6 +1,4 @@
-library wyd_core;
-
-import 'package:flutter/material.dart';
+part of wyd_core;
 
 // ignore: must_be_immutable
 class SimpleIconButton extends StatelessWidget {
