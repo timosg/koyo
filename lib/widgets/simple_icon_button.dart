@@ -26,12 +26,12 @@ class SimpleIconButton extends StatelessWidget {
     this.splashFactory,
     this.radius,
     this.borderRadius,
-    this.customBorder,
-    this.enableFeedback,
-    this.excludeFromSemantics,
-    this.canRequestFocus,
+    this.customBorder = const CircleBorder(),
+    this.enableFeedback = true,
+    this.excludeFromSemantics = false,
+    this.canRequestFocus = true,
     this.onFocusChange,
-    this.autofocus,
+    this.autofocus = false,
   });
 
   // Custom
@@ -57,30 +57,53 @@ class SimpleIconButton extends StatelessWidget {
   double? radius;
   BorderRadius? borderRadius;
   ShapeBorder? customBorder;
-  bool? enableFeedback = true;
-  bool? excludeFromSemantics = false;
+  bool? enableFeedback;
+  bool excludeFromSemantics;
   FocusNode? focusNode;
-  bool? canRequestFocus = true;
+  bool canRequestFocus;
   void Function(bool)? onFocusChange;
-  bool? autofocus = false;
-
-  // Defaults
-  double? defaultIconSize = 30;
+  bool autofocus;
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final iconTheme = theme.iconTheme;
+
     return Transform.scale(
       scale: scale,
       child: InkWell(
         onTap: onTap,
-        customBorder: const CircleBorder(),
+        onTapUp: onTapUp,
+        onDoubleTap: onDoubleTap,
+        onLongPress: onLongPress,
+        onTapDown: onTapDown,
+        onTapCancel: onTapCancel,
+        onHighlightChanged: onHighlightChanged,
+        onHover: onHover,
+        mouseCursor: mouseCursor,
+        focusColor: focusColor,
+        hoverColor: hoverColor,
+        highlightColor: highlightColor,
+        overlayColor: overlayColor,
+        splashColor: splashColor,
+        splashFactory: splashFactory,
+        radius: radius,
+        borderRadius: borderRadius,
+        customBorder: customBorder,
+        enableFeedback: enableFeedback,
+        excludeFromSemantics: excludeFromSemantics,
+        focusNode: focusNode,
+        canRequestFocus: canRequestFocus,
+        onFocusChange: onFocusChange,
+        autofocus: autofocus,
         child: icon != null
             ? Container(
                 margin: iconMargin,
                 child: Icon(
                   key: icon!.key,
                   icon!.icon,
-                  size: icon!.size ?? defaultIconSize,
+                  size: icon!.size ??
+                      (iconTheme.size ?? 24.0) + (scale * (1.0 - scale)),
                   color: icon!.color,
                   semanticLabel: icon!.semanticLabel,
                   textDirection: icon!.textDirection,
