@@ -1,14 +1,17 @@
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 
-class LoadingSpinner extends StatelessWidget {
-  const LoadingSpinner({super.key});
+// ignore: must_be_immutable
+class LoadingIndicator extends StatelessWidget {
+  LoadingIndicator({super.key, this.androidScale});
+
+  double? androidScale = 0.5;
 
   @override
   Widget build(BuildContext context) {
     if (Platform.isAndroid) {
       return Transform.scale(
-        scale: 0.5,
+        scale: androidScale,
         child: const CircularProgressIndicator(),
       );
     }

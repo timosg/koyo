@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 library wyd_core;
 
 import 'package:flutter/material.dart';
@@ -5,23 +7,27 @@ import 'package:flutter/material.dart';
 const double _kSpacing = 10;
 
 class HSpace extends StatelessWidget {
-  const HSpace({super.key});
+  HSpace(this.spacing, {super.key});
+
+  double spacing = _kSpacing;
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      width: _kSpacing,
+    return SizedBox(
+      width: spacing,
     );
   }
 }
 
 class VSpace extends StatelessWidget {
-  const VSpace({super.key});
+  VSpace(this.spacing, {super.key});
+
+  double spacing = _kSpacing;
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      height: _kSpacing,
+    return SizedBox(
+      height: spacing,
     );
   }
 }
