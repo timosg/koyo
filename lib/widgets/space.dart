@@ -11,7 +11,7 @@ class Space extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: h,
+      height: kSpacing.xs,
       width: w,
     );
   }
