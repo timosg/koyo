@@ -1,7 +1,7 @@
 name: wyd_core
 description: Wydget core building blocks.
-version: 0.1.0
-homepage: www.wydget.de
+version: 0.2.0
+homepage: https://www.wydget.de
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
