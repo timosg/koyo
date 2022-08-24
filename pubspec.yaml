@@ -1,5 +1,5 @@
 name: wyd_core
-description: Wydget core building blocks.
+description: Wydget core and util library.
 version: 0.2.0
 homepage: https://www.wydget.de
 
