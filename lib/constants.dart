@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_int_literals
+// ignore_for_file: camel_case_types
 
 part of wyd_core;
 
@@ -32,59 +32,4 @@ class kAnimationSpeed {
   static const double normal = 550;
   static const double fast = 350;
   static const double veryFast = 200;
-}
-
-class kSpreadRadius {
-  static const double xs = 1;
-  static const double sm = 2;
-  static const double md = 3;
-  static const double lg = 4;
-  static const double xl = 5;
-}
-
-//TODO: shadows
-class kBlurRadius {
-  static const double xs = 1.5;
-  static const double sm = 2.0;
-  static const double md = 2.5;
-  static const double lg = 3.0;
-  static const double xl = 3.5;
-}
-
-// ---- Widget specific constants ----
-
-//TODO: shadows
-class kShadows {
-  static final _shadowColor = Colors.grey.withOpacity(0.5);
-
-  static final xs = BoxShadow(
-    color: _shadowColor,
-    spreadRadius: 5,
-    blurRadius: 7,
-    offset: const Offset(0, 3),
-  );
-  static final sm = BoxShadow(
-    color: _shadowColor,
-    spreadRadius: 5,
-    blurRadius: 7,
-    offset: const Offset(0, 3),
-  );
-  static final md = BoxShadow(
-    color: _shadowColor,
-    spreadRadius: 5,
-    blurRadius: 7,
-    offset: const Offset(0, 3),
-  );
-  static final lg = BoxShadow(
-    color: _shadowColor,
-    spreadRadius: 5,
-    blurRadius: 7,
-    offset: const Offset(0, 3),
-  );
-  static final xl = BoxShadow(
-    color: _shadowColor,
-    spreadRadius: 5,
-    blurRadius: 7,
-    offset: const Offset(0, 3),
-  );
 }
