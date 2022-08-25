@@ -75,7 +75,7 @@ Widget shadows() => Scaffold(
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(kRadius.md),
-                boxShadow: kBoxShadow.darkLg,
+                boxShadow: kBoxShadow.xxl,
               ),
               child: const Center(child: Text('darkLg')),
             ),
