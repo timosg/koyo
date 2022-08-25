@@ -1,8 +1,10 @@
 part of wyd_core;
 
+// ** Group not ready yet
+
 // Row with space
-class HGroup extends StatelessWidget {
-  const HGroup({
+class _HGroup extends StatelessWidget {
+  const _HGroup({
     super.key,
     this.children = const <Widget>[],
     this.gap = kSpacing.md,
@@ -49,8 +51,8 @@ class HGroup extends StatelessWidget {
 }
 
 // Column with space
-class VGroup extends StatelessWidget {
-  const VGroup({
+class _VGroup extends StatelessWidget {
+  const _VGroup({
     super.key,
     this.children = const <Widget>[],
     this.gap = kSpacing.md,
