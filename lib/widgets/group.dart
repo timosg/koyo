@@ -5,7 +5,7 @@ class HGroup extends StatelessWidget {
   const HGroup({
     super.key,
     this.children = const <Widget>[],
-    this.gap = kSpacing.xs,
+    this.gap = kSpacing.md,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -53,7 +53,7 @@ class VGroup extends StatelessWidget {
   const VGroup({
     super.key,
     this.children = const <Widget>[],
-    this.gap = kSpacing.xs,
+    this.gap = kSpacing.md,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,

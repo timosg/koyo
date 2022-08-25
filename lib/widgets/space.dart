@@ -18,7 +18,7 @@ class _Space extends StatelessWidget {
 }
 
 class HSpace extends StatelessWidget {
-  HSpace({super.key, this.h = kSpacing.xs});
+  HSpace({super.key, this.h = kSpacing.md});
 
   double? h;
 
@@ -29,7 +29,7 @@ class HSpace extends StatelessWidget {
 }
 
 class VSpace extends StatelessWidget {
-  VSpace({super.key, this.w = kSpacing.xs});
+  VSpace({super.key, this.w = kSpacing.md});
 
   double? w;
 
