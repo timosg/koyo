@@ -1,6 +1,6 @@
 name: wyd_core
 description: Wydget core and util library.
-version: 0.2.0
+version: 0.3.0+1
 homepage: https://www.wydget.de
 
 environment:
