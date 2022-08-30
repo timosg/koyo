@@ -12,7 +12,10 @@ Widget light() => Theme(
 
 Widget dark() => Theme(
       data: ThemeData.dark(),
-      child: Center(
-        child: LoadingIndicator(),
+      child: ColoredBox(
+        color: Colors.black,
+        child: Center(
+          child: LoadingIndicator(),
+        ),
       ),
     );

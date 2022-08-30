@@ -1,7 +1,7 @@
 part of wyd_core;
 
 class Surface extends StatelessWidget {
-  Surface({
+  const Surface({
     //  ** Container properties
     super.key,
     this.color,
@@ -24,23 +24,23 @@ class Surface extends StatelessWidget {
   });
 
   // ** Container properties
-  Color? color;
+  final Color? color;
   // Decoration? decoration;
   // Decoration? foregroundDecoration;
-  double? width;
-  double? height;
-  BoxConstraints? constraints;
-  EdgeInsetsGeometry? margin;
-  Matrix4? transform;
-  AlignmentGeometry? transformAlignment;
-  Widget? child;
-  Clip clipBehavior;
+  final double? width;
+  final double? height;
+  final BoxConstraints? constraints;
+  final EdgeInsetsGeometry? margin;
+  final Matrix4? transform;
+  final AlignmentGeometry? transformAlignment;
+  final Widget? child;
+  final Clip clipBehavior;
   // ** Override container properties
-  AlignmentGeometry? alignment;
-  double? padding;
+  final AlignmentGeometry? alignment;
+  final double? padding;
   // ** Custom properties
-  double? borderRadius;
-  List<BoxShadow>? boxShadow;
+  final double? borderRadius;
+  final List<BoxShadow>? boxShadow;
 
   @override
   Widget build(BuildContext context) {

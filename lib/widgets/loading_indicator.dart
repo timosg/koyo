@@ -2,9 +2,9 @@ part of wyd_core;
 
 // ignore: must_be_immutable
 class LoadingIndicator extends StatelessWidget {
-  LoadingIndicator({super.key, this.androidScale = 0.5});
+  const LoadingIndicator({super.key, this.androidScale = 0.5});
 
-  double? androidScale;
+  final double? androidScale;
 
   @override
   Widget build(BuildContext context) {

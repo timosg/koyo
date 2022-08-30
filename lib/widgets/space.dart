@@ -2,11 +2,11 @@
 
 part of wyd_core;
 
-class _Space extends StatelessWidget {
-  _Space({this.h, this.w});
+class Space extends StatelessWidget {
+  const Space({super.key, this.h, this.w});
 
-  double? h;
-  double? w;
+  final double? h;
+  final double? w;
 
   @override
   Widget build(BuildContext context) {
@@ -18,23 +18,23 @@ class _Space extends StatelessWidget {
 }
 
 class HSpace extends StatelessWidget {
-  HSpace({super.key, this.h = kSpacing.md});
+  const HSpace({super.key, this.h = kSpacing.md});
 
-  double? h;
+  final double? h;
 
   @override
   Widget build(BuildContext context) {
-    return _Space(h: h);
+    return Space(h: h);
   }
 }
 
 class VSpace extends StatelessWidget {
-  VSpace({super.key, this.w = kSpacing.md});
+  const VSpace({super.key, this.w = kSpacing.md});
 
-  double? w;
+  final double? w;
 
   @override
   Widget build(BuildContext context) {
-    return _Space(w: w);
+    return Space(w: w);
   }
 }

@@ -69,6 +69,7 @@ Widget shadows() => Scaffold(
             //   ),
             //   child: const Center(child: Text('xxl')),
             // ),
+            const HSpace(h: 100),
             Container(
               height: 50,
               width: 200,
@@ -77,18 +78,8 @@ Widget shadows() => Scaffold(
                 borderRadius: BorderRadius.circular(kRadius.md),
                 boxShadow: kBoxShadow.xxl,
               ),
-              child: const Center(child: Text('darkLg')),
-            ),
-            Container(
-              height: 50,
-              width: 200,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(kRadius.md),
-                boxShadow: kBoxShadow.inner,
-              ),
-              child: const Center(child: Text('inner')),
-            ),
+              child: const Center(child: Text('xxl')),
+            )
           ],
         ),
       ),

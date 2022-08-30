@@ -3,12 +3,13 @@
 part of wyd_core;
 
 class kSpacing {
-  static const double xs = 5; // 10
-  static const double sm = 10; // 12
-  static const double md = 12; // 16
-  static const double lg = 16; // 20
-  static const double xl = 20; // 24
-  static const double xxl = 24;
+  static const double xxs = 6;
+  static const double xs = 10;
+  static const double sm = 12;
+  static const double md = 16;
+  static const double lg = 20;
+  static const double xl = 24;
+  static const double xxl = 32;
 }
 
 class kRadius {

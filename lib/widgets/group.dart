@@ -1,13 +1,11 @@
 part of wyd_core;
 
-// ** Group not ready yet
-
 // Row with space
-class _HGroup extends StatelessWidget {
-  const _HGroup({
+class HGroup extends StatelessWidget {
+  const HGroup({
     super.key,
     this.children = const <Widget>[],
-    this.gap = kSpacing.md,
+    this.spacing = kSpacing.md,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -17,7 +15,7 @@ class _HGroup extends StatelessWidget {
   });
 
   final List<Widget> children;
-  final double gap;
+  final double spacing;
 
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
@@ -35,27 +33,22 @@ class _HGroup extends StatelessWidget {
       textDirection: textDirection,
       verticalDirection: verticalDirection,
       textBaseline: textBaseline,
-      children: List<Widget>.generate(
-        children.length,
-        (index) {
-          final child = children[index];
-          if (index == 0) return child;
-          return Container(
-            margin: EdgeInsets.only(left: gap),
-            child: child,
-          );
-        },
-      ),
+      children: [
+        for (int i = 0; i < children.length; i++) ...[
+          if (i != 0) VSpace(w: spacing),
+          children[i],
+        ],
+      ],
     );
   }
 }
 
 // Column with space
-class _VGroup extends StatelessWidget {
-  const _VGroup({
+class VGroup extends StatelessWidget {
+  const VGroup({
     super.key,
     this.children = const <Widget>[],
-    this.gap = kSpacing.md,
+    this.spacing = kSpacing.md,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -65,7 +58,7 @@ class _VGroup extends StatelessWidget {
   });
 
   final List<Widget> children;
-  final double gap;
+  final double spacing;
 
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
@@ -83,17 +76,12 @@ class _VGroup extends StatelessWidget {
       textDirection: textDirection,
       verticalDirection: verticalDirection,
       textBaseline: textBaseline,
-      children: List<Widget>.generate(
-        children.length,
-        (index) {
-          final child = children[index];
-          if (index == 0) return child;
-          return Container(
-            margin: EdgeInsets.only(top: gap),
-            child: child,
-          );
-        },
-      ),
+      children: [
+        for (int i = 0; i < children.length; i++) ...[
+          if (i != 0) HSpace(h: spacing),
+          children[i],
+        ],
+      ],
     );
   }
 }
