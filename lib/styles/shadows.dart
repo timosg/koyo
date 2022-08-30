@@ -3,6 +3,8 @@
 part of wyd_core;
 
 class kBoxShadow {
+  static const _luminanceTreshold = 0.179;
+
   // xs: '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)',
   static final xs = [
     BoxShadow(
@@ -118,4 +120,22 @@ class kBoxShadow {
       offset: const Offset(0, 15),
     ),
   ];
+
+  static List<BoxShadow> neumorphism(Color color) {
+    final isLight = color.computeLuminance() > _luminanceTreshold;
+    return [
+      BoxShadow(
+        color: !isLight ? Colors.black : Colors.grey.shade500,
+        spreadRadius: 1,
+        blurRadius: 15,
+        offset: const Offset(4, 4),
+      ),
+      BoxShadow(
+        color: !isLight ? Colors.grey.shade800 : Colors.white,
+        spreadRadius: 1,
+        blurRadius: 15,
+        offset: const Offset(-4, -4),
+      ),
+    ];
+  }
 }

@@ -79,6 +79,40 @@ Widget shadows() => Scaffold(
                 boxShadow: kBoxShadow.xxl,
               ),
               child: const Center(child: Text('xxl')),
+            ),
+            const HSpace(h: 100),
+            Container(
+              height: 50,
+              width: 200,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(kRadius.md),
+                boxShadow: kBoxShadow.neumorphism(Colors.white),
+              ),
+              child: const Center(child: Text('Neumorphism - Light')),
+            ),
+            const HSpace(h: 50),
+            Container(
+              height: 100,
+              width: 300,
+              color: Colors.grey.shade900,
+              child: Center(
+                child: Container(
+                  height: 50,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade900,
+                    borderRadius: BorderRadius.circular(kRadius.md),
+                    boxShadow: kBoxShadow.neumorphism(Colors.grey.shade900),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Neumorphism - Dark',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
             )
           ],
         ),
