@@ -1,9 +1,15 @@
+// ignore_for_file: camel_case_types
+
 part of wyd_core;
 
-class kDurationMs {
-  static const int verySlow = 2000;
-  static const int slow = 1000;
-  static const int normal = 550;
-  static const int fast = 350;
-  static const int veryFast = 200;
+class kDuration {
+  static final ms = _Milliseconds();
+}
+
+class _Milliseconds {
+  final int verySlow = 2000;
+  final int slow = 1000;
+  final int normal = 550;
+  final int fast = 350;
+  final int veryFast = 200;
 }
