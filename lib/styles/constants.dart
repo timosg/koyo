@@ -29,11 +29,3 @@ class kBreakpoints {
   static const double xl = 1400;
   static const double xxl = 1536;
 }
-
-class kAnimationSpeed {
-  static const double verySlow = 2000;
-  static const double slow = 1000;
-  static const double normal = 550;
-  static const double fast = 350;
-  static const double veryFast = 200;
-}
