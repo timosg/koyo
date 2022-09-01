@@ -8,7 +8,7 @@ part 'styles/shadows.dart';
 
 part 'utils/durations.dart';
 
-part 'builders/async_builder.dart';
+part 'builders/suspense.dart';
 
 part 'widgets/if.dart';
 part 'widgets/loading_indicator.dart';
