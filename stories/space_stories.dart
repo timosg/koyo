@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:koyo/core.dart';
+import 'package:koyo/koyo.dart';
 
 Widget h_space() => Column(
       children: [
@@ -10,7 +10,7 @@ Widget h_space() => Column(
           height: 50,
           width: 50,
         ),
-        HSpace(),
+        const HSpace(),
         Container(
           color: Colors.red,
           height: 50,
