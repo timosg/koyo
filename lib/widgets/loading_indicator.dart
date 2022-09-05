@@ -1,4 +1,4 @@
-part of wyd_core;
+part of koyo;
 
 // ignore: must_be_immutable
 class LoadingIndicator extends StatelessWidget {

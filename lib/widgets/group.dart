@@ -1,4 +1,4 @@
-part of wyd_core;
+part of koyo;
 
 // Row with space
 class HGroup extends StatelessWidget {

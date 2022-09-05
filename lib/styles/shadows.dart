@@ -1,6 +1,6 @@
 // ignore_for_file: camel_case_types, lines_longer_than_80_chars
 
-part of wyd_core;
+part of koyo;
 
 class kBoxShadow {
   static const _luminanceTreshold = 0.179;

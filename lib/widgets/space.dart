@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable, avoid_unused_constructor_parameters
 
-part of wyd_core;
+part of koyo;
 
 class Space extends StatelessWidget {
   const Space({super.key, this.h, this.w});

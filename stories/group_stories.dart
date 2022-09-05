@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:wyd_core/core.dart';
+import 'package:koyo/core.dart';
 
 Widget h_group() => Center(
       child: ColoredBox(

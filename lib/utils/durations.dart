@@ -1,6 +1,6 @@
 // ignore_for_file: camel_case_types
 
-part of wyd_core;
+part of koyo;
 
 class kDuration {
   static final ms = _Milliseconds();

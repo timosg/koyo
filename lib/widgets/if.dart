@@ -1,4 +1,4 @@
-part of wyd_core;
+part of koyo;
 
 class If extends StatelessWidget {
   const If({
@@ -16,6 +16,6 @@ class If extends StatelessWidget {
   Widget build(BuildContext context) {
     return condition
         ? child
-        : (fallback != null ? fallback! : const SizedBox());
+        : (fallback != null ? fallback! : const SizedBox.shrink());
   }
 }
