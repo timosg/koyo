@@ -10,13 +10,11 @@ part 'types/types.dart';
 // Extensions
 part 'extensions/color.dart';
 part 'extensions/brightness.dart';
-// Styles
-part 'styles/constants.dart';
-part 'styles/shadows.dart';
-part 'utils/delayed.dart';
-
 // Utils
-part 'utils/durations.dart';
+part 'utils/constants.dart';
+part 'utils/delayed.dart';
+// Styles
+part 'styles/shadows.dart';
 // Widgets
 part 'widgets/empty.dart';
 part 'widgets/group.dart';

@@ -4,8 +4,8 @@ class SimpleList<T> extends StatelessWidget {
   const SimpleList({
     super.key,
     required this.items,
-    this.spacing = 0,
     required this.builder,
+    this.spacing = 0,
   });
 
   final List<T> items;
