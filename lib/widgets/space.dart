@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable, avoid_unused_constructor_parameters
 
-part of koyo;
+import 'package:flutter/material.dart';
+import 'package:koyo/koyo.dart';
 
 class Space extends StatelessWidget {
   const Space({super.key, this.h, this.w});
@@ -18,23 +19,23 @@ class Space extends StatelessWidget {
 }
 
 class HSpace extends StatelessWidget {
-  const HSpace({super.key, this.h = kSpacing.md});
+  const HSpace({super.key, this.h});
 
   final double? h;
 
   @override
   Widget build(BuildContext context) {
-    return Space(h: h);
+    return Space(h: h ?? $styles.spacings.md);
   }
 }
 
-class VSpace extends StatelessWidget {
-  const VSpace({super.key, this.w = kSpacing.md});
+class WSpace extends StatelessWidget {
+  const WSpace({super.key, this.w});
 
   final double? w;
 
   @override
   Widget build(BuildContext context) {
-    return Space(w: w);
+    return Space(w: w ?? $styles.spacings.md);
   }
 }

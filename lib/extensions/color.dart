@@ -1,4 +1,4 @@
-part of koyo;
+import 'package:flutter/material.dart';
 
 extension ColorExtension on Color {
   static const _luminanceTreshold = 0.179;

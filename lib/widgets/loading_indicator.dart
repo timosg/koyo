@@ -1,6 +1,8 @@
-part of koyo;
-
 // ignore: must_be_immutable
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+
 class LoadingIndicator extends StatelessWidget {
   const LoadingIndicator({super.key, this.androidScale = 0.5});
 

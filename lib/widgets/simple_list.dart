@@ -1,4 +1,5 @@
-part of koyo;
+import 'package:flutter/material.dart';
+import 'package:koyo/widgets/widgets.dart';
 
 class SimpleList<T> extends StatelessWidget {
   const SimpleList({
@@ -18,7 +19,7 @@ class SimpleList<T> extends StatelessWidget {
       child: Column(
         children: <Widget>[
           for (int index = 0; index < items.length; index++) ...[
-            if (index != 0) VSpace(w: spacing),
+            if (index != 0) WSpace(w: spacing),
             builder(context, items[index], index),
           ]
         ],

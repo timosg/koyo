@@ -1,4 +1,4 @@
-part of koyo;
+import 'package:flutter/material.dart';
 
 class Empty extends StatelessWidget {
   const Empty({super.key});

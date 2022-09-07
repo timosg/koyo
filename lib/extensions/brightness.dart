@@ -1,4 +1,4 @@
-part of koyo;
+import 'package:flutter/material.dart';
 
 extension BrightnessExension on Brightness {
   /// Check if this is equal to [Brightness.dark]

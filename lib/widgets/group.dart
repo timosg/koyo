@@ -1,11 +1,12 @@
-part of koyo;
-
 // Row with space
-class HGroup extends StatelessWidget {
-  const HGroup({
+import 'package:flutter/material.dart';
+import 'package:koyo/koyo.dart';
+
+class SpacedRow extends StatelessWidget {
+  const SpacedRow({
     super.key,
     this.children = const <Widget>[],
-    this.spacing = kSpacing.md,
+    this.spacing,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -15,7 +16,7 @@ class HGroup extends StatelessWidget {
   });
 
   final List<Widget> children;
-  final double spacing;
+  final double? spacing;
 
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
@@ -35,7 +36,7 @@ class HGroup extends StatelessWidget {
       textBaseline: textBaseline,
       children: [
         for (int i = 0; i < children.length; i++) ...[
-          if (i != 0) VSpace(w: spacing),
+          if (i != 0) WSpace(w: spacing),
           children[i],
         ],
       ],
@@ -44,11 +45,11 @@ class HGroup extends StatelessWidget {
 }
 
 // Column with space
-class VGroup extends StatelessWidget {
-  const VGroup({
+class SpacedColumn extends StatelessWidget {
+  const SpacedColumn({
     super.key,
     this.children = const <Widget>[],
-    this.spacing = kSpacing.md,
+    this.spacing,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -58,7 +59,7 @@ class VGroup extends StatelessWidget {
   });
 
   final List<Widget> children;
-  final double spacing;
+  final double? spacing;
 
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;

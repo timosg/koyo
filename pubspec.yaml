@@ -1,6 +1,6 @@
 name: koyo
 description: Flutter utility library.
-version: 0.4.0+1
+version: 0.5.0+1
 homepage: https://www.wydget.de
 
 environment:
@@ -17,5 +17,4 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   lucide_icons: ^0.88.0
-  monarch: ^2.3.0
   very_good_analysis: ^3.0.1
