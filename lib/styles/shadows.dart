@@ -3,10 +3,10 @@
 part of styles;
 
 class _Shadows {
-  static const _luminanceTreshold = 0.179;
+  final _luminanceTreshold = 0.179;
 
   // xs: '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)',
-  static final xs = [
+  final xs = [
     BoxShadow(
       color: Colors.black.withOpacity(0.05),
       blurRadius: 3,
@@ -41,7 +41,7 @@ class _Shadows {
   ];
 
   // md: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
-  static final md = [
+  final md = [
     BoxShadow(
       color: Colors.black.withOpacity(0.05),
       blurRadius: 3,
@@ -62,7 +62,7 @@ class _Shadows {
   ];
 
   // lg: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px -7px',
-  static final lg = [
+  final lg = [
     BoxShadow(
       color: Colors.black.withOpacity(0.05),
       blurRadius: 3,
@@ -83,7 +83,7 @@ class _Shadows {
   ];
 
   // xl: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 36px 28px -7px, rgba(0, 0, 0, 0.04) 0px 17px 17px -7px',
-  static final xl = [
+  final xl = [
     BoxShadow(
       color: Colors.black.withOpacity(0.05),
       blurRadius: 3,
@@ -104,7 +104,7 @@ class _Shadows {
   ];
 
   // rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
-  static final xxl = [
+  final xxl = [
     BoxShadow(
       color: Colors.black.withOpacity(0.1),
       spreadRadius: 1,
@@ -121,7 +121,7 @@ class _Shadows {
     ),
   ];
 
-  static List<BoxShadow> neumorphism(Color color) {
+  List<BoxShadow> neumorphism(Color color) {
     final isLight = color.computeLuminance() > _luminanceTreshold;
     return [
       BoxShadow(
