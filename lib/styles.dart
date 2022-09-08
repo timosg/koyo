@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_field_initializers_in_const_classes
+
 library styles;
 
 import 'package:flutter/material.dart';
@@ -5,9 +7,12 @@ import 'package:flutter/material.dart';
 part 'styles/constants.dart';
 part 'styles/shadows.dart';
 
-class $styles {
-  static const shadows = _Shadows();
-  static const spacings = _Spacings();
-  static const breakpoints = _Breakpoints();
-  static const corners = _Corners();
+class _Styles {
+  const _Styles();
+  final shadows = const _Shadows();
+  final spacings = const _Spacings();
+  final breakpoints = const _Breakpoints();
+  final corners = const _Corners();
 }
+
+const $styles = _Styles();
