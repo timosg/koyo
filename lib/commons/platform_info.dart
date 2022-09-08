@@ -5,10 +5,12 @@ import 'package:internet_connection_checker_plus/internet_connection_checker_plu
 
 class PlatformInfo {
   static const _desktopPlatforms = [
+    TargetPlatform.fuchsia,
     TargetPlatform.macOS,
     TargetPlatform.windows,
     TargetPlatform.linux,
   ];
+
   static const _mobilePlatforms = [TargetPlatform.android, TargetPlatform.iOS];
 
   static bool get isDesktop =>
@@ -18,6 +20,7 @@ class PlatformInfo {
   static bool get isWindows => defaultTargetPlatform == TargetPlatform.windows;
   static bool get isLinux => defaultTargetPlatform == TargetPlatform.linux;
   static bool get isMacOS => defaultTargetPlatform == TargetPlatform.macOS;
+  static bool get isFuchsia => defaultTargetPlatform == TargetPlatform.fuchsia;
   static bool get isAndroid => defaultTargetPlatform == TargetPlatform.android;
   static bool get isIOS => defaultTargetPlatform == TargetPlatform.iOS;
 

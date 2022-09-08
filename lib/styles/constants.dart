@@ -24,11 +24,3 @@ class Breakpoints {
   final double xl = 1400;
   final double xxl = 1536;
 }
-
-class Durations {
-  final int verySlow = 2000;
-  final int slow = 1000;
-  final int normal = 550;
-  final int fast = 350;
-  final int veryFast = 200;
-}

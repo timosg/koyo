@@ -2,10 +2,8 @@ library koyo;
 
 // Commons
 export 'commons/commons.dart';
-// Extensions
-export 'extensions/extensions.dart';
-// Styles
-export 'styles/styles.dart';
+// Globals
+export 'globals.dart';
 // Types
 export 'types/types.dart';
 // Widgets
