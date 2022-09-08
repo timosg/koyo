@@ -12,7 +12,7 @@ class _Spacings {
 class _Corners {
   final double xs = 2;
   final double sm = 4;
-  static const double md = 8;
+  final double md = 8;
   final double lg = 16;
   final double xl = 32;
   final double xxl = 64;
