@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_field_initializers_in_const_classes
+
 part of styles;
 
 class _Spacings {
@@ -10,6 +12,7 @@ class _Spacings {
 }
 
 class _Corners {
+  const _Corners();
   final double xs = 2;
   final double sm = 4;
   final double md = 8;

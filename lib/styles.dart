@@ -9,5 +9,5 @@ class $styles {
   static final shadows = _Shadows();
   static final spacings = _Spacings();
   static final breakpoints = _Breakpoints();
-  static final corners = _Corners();
+  static const corners = _Corners();
 }
