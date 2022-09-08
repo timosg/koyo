@@ -5,11 +5,9 @@ import 'package:flutter/material.dart';
 part 'styles/constants.dart';
 part 'styles/shadows.dart';
 
-class _Styles {
-  final shadows = _Shadows();
-  final spacings = _Spacings();
-  final breakpoints = _Breakpoints();
-  final corners = _Corners();
+class $styles {
+  static final shadows = _Shadows();
+  // static const spacings = _Spacings();
+  // static const breakpoints = _Breakpoints();
+  // static const corners = _Corners();
 }
-
-final $styles = _Styles();
