@@ -9,7 +9,7 @@ class Debounced {
 
   void call(VoidCallback action) {
     _action = action;
-    _timer?.cancel();
+    if (_timer?.isActive ?? false) _timer?.cancel();
     _timer = Timer(interval, _callAction);
   }
 
