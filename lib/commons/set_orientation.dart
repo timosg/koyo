@@ -1,6 +1,4 @@
-// ignore_for_file: unused_element
-
-import 'package:flutter/services.dart';
+part of commons;
 
 class SetOrientation {
   static final portrait = _Portrait();

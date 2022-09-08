@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:koyo/widgets/widgets.dart';
+part of widgets;
 
 class SimpleList<T> extends StatelessWidget {
   const SimpleList({

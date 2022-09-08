@@ -1,6 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter/material.dart';
+part of commons;
 
 class Debounced {
   Debounced(this.interval);

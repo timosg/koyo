@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of core;
 
 extension BrightnessExension on Brightness {
   /// Check if this is equal to [Brightness.dark]

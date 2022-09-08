@@ -1,4 +1,6 @@
-class Durations {
+part of animations;
+
+class _Durations {
   final int verySlow = 2000;
   final int slow = 1000;
   final int normal = 550;

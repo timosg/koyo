@@ -1,4 +1,4 @@
-import 'package:flutter/scheduler.dart';
+part of commons;
 
 class Delayed {
   static void post(void Function() callback) => SchedulerBinding.instance

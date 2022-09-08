@@ -1,7 +1,4 @@
-// ignore_for_file: must_be_immutable, avoid_unused_constructor_parameters
-
-import 'package:flutter/material.dart';
-import 'package:koyo/globals.dart';
+part of widgets;
 
 class Space extends StatelessWidget {
   const Space({super.key, this.h, this.w});

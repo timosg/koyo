@@ -1,4 +1,6 @@
-class Spacings {
+part of styles;
+
+class _Spacings {
   final double xs = 6; // Value before v0.4.0 = 10
   final double sm = 12;
   final double md = 16;
@@ -7,7 +9,7 @@ class Spacings {
   final double xxl = 32;
 }
 
-class Corners {
+class _Corners {
   final double xs = 2;
   final double sm = 4;
   final double md = 8;
@@ -16,7 +18,7 @@ class Corners {
   final double xxl = 64;
 }
 
-class Breakpoints {
+class _Breakpoints {
   final double xs = 576;
   final double sm = 768;
   final double md = 992;

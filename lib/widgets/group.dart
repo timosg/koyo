@@ -1,7 +1,6 @@
-// Row with space
-import 'package:flutter/material.dart';
-import 'package:koyo/koyo.dart';
+part of widgets;
 
+// Row with space
 class SpacedRow extends StatelessWidget {
   const SpacedRow({
     super.key,
