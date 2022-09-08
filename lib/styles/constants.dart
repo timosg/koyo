@@ -3,6 +3,7 @@
 part of styles;
 
 class _Spacings {
+  const _Spacings();
   final double xs = 6; // Value before v0.4.0 = 10
   final double sm = 12;
   final double md = 16;
@@ -22,6 +23,7 @@ class _Corners {
 }
 
 class _Breakpoints {
+  const _Breakpoints();
   final double xs = 576;
   final double sm = 768;
   final double md = 992;

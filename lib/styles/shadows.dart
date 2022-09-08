@@ -1,123 +1,148 @@
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: lines_longer_than_80_chars, avoid_field_initializers_in_const_classes
 
 part of styles;
 
+// 100% — FF
+// 95% — F2
+// 90% — E6
+// 85% — D9
+// 80% — CC
+// 75% — BF
+// 70% — B3
+// 65% — A6
+// 60% — 99
+// 55% — 8C
+// 50% — 80
+// 45% — 73
+// 40% — 66
+// 35% — 59
+// 30% — 4D
+// 25% — 40
+// 20% — 33
+// 15% — 26
+// 10% — 1A
+// 5% — 0D
+// 4% — 0A
+// 0% — 00
+
 class _Shadows {
+  const _Shadows();
+
   final _luminanceTreshold = 0.179;
 
   // xs: '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)',
-  final xs = [
+  final xs = const [
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       blurRadius: 3,
-      offset: const Offset(0, 1),
+      offset: Offset(0, 1),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.1),
+      color: Color(0x1A000000),
       blurRadius: 2,
-      offset: const Offset(0, 1),
+      offset: Offset(0, 1),
     ),
   ];
 
   // sm: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 10px 15px -5px, rgba(0, 0, 0, 0.04) 0px 7px 7px -5px',
-  static final sm = [
+  final sm = const [
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       blurRadius: 3,
-      offset: const Offset(0, 1),
+      offset: Offset(0, 1),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       spreadRadius: -5,
       blurRadius: 15,
-      offset: const Offset(0, 10),
+      offset: Offset(0, 10),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.04),
+      color: Color(0x0A000000),
       spreadRadius: -5,
       blurRadius: 7,
-      offset: const Offset(0, 7),
+      offset: Offset(0, 7),
     ),
   ];
 
   // md: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
-  final md = [
+  final md = const [
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       blurRadius: 3,
-      offset: const Offset(0, 1),
+      offset: Offset(0, 1),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       spreadRadius: -5,
       blurRadius: 25,
-      offset: const Offset(0, 20),
+      offset: Offset(0, 20),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.04),
+      color: Color(0x0A000000),
       spreadRadius: -5,
       blurRadius: 10,
-      offset: const Offset(0, 10),
+      offset: Offset(0, 10),
     ),
   ];
 
   // lg: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px -7px',
-  final lg = [
+  final lg = const [
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       blurRadius: 3,
-      offset: const Offset(0, 1),
+      offset: Offset(0, 1),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       spreadRadius: -7,
       blurRadius: 23,
-      offset: const Offset(0, 28),
+      offset: Offset(0, 28),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.04),
+      color: Color(0x0A000000),
       spreadRadius: -7,
       blurRadius: 12,
-      offset: const Offset(0, 12),
+      offset: Offset(0, 12),
     ),
   ];
 
   // xl: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 36px 28px -7px, rgba(0, 0, 0, 0.04) 0px 17px 17px -7px',
-  final xl = [
+  final xl = const [
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       blurRadius: 3,
-      offset: const Offset(0, 1),
+      offset: Offset(0, 1),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.05),
+      color: Color(0x0D000000),
       spreadRadius: -7,
       blurRadius: 28,
-      offset: const Offset(0, 36),
+      offset: Offset(0, 36),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.04),
+      color: Color(0x0A000000),
       spreadRadius: -7,
       blurRadius: 17,
-      offset: const Offset(0, 17),
+      offset: Offset(0, 17),
     ),
   ];
 
   // rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
-  final xxl = [
+  final xxl = const [
     BoxShadow(
-      color: Colors.black.withOpacity(0.1),
+      color: Color(0x1A000000),
       spreadRadius: 1,
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.2),
+      color: Color(0x33000000),
       blurRadius: 10,
-      offset: const Offset(0, 5),
+      offset: Offset(0, 5),
     ),
     BoxShadow(
-      color: Colors.black.withOpacity(0.4),
+      color: Color(0x66000000),
       blurRadius: 40,
-      offset: const Offset(0, 15),
+      offset: Offset(0, 15),
     ),
   ];
 
