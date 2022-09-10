@@ -22,7 +22,7 @@ class SimpleList<T> extends StatelessWidget {
         child: Column(
           children: <Widget>[
             for (int index = 0; index < items.length; index++) ...[
-              if (index != 0) WSpace(w: spacing),
+              if (index != 0) HSpace(h: spacing),
               builder(context, items[index], index),
             ]
           ],

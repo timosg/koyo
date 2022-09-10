@@ -6,7 +6,6 @@ class SpacedColumn extends StatelessWidget {
     this.children = const <Widget>[],
     this.padding = EdgeInsets.zero,
     this.spacing,
-    this.separatorBuilder,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
