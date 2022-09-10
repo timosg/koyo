@@ -1,9 +1,9 @@
 part of commons;
 
-class Debounced {
-  Debounced(this.interval);
-  final Duration interval;
+class Debouncer {
+  Debouncer(this.interval);
 
+  final Duration interval;
   VoidCallback? _action;
   Timer? _timer;
 
