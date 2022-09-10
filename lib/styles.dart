@@ -15,4 +15,5 @@ class _Styles {
   final breakpoints = const _Breakpoints();
 }
 
+// Globals
 const $styles = _Styles();

@@ -11,3 +11,7 @@ part 'utils/debouncer.dart';
 part 'utils/delayer.dart';
 part 'utils/platform_info.dart';
 part 'utils/set_orientation.dart';
+
+// Globals
+final $orientation = _Orientation();
+final $platform = _PlatformInfo();
