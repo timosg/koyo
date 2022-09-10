@@ -17,7 +17,6 @@ class SpacedRow extends StatelessWidget {
   final List<Widget> children;
   final EdgeInsets padding;
   final double? spacing;
-
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
   final CrossAxisAlignment crossAxisAlignment;

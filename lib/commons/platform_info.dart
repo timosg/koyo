@@ -8,7 +8,10 @@ class PlatformInfo {
     TargetPlatform.linux,
   ];
 
-  static const _mobilePlatforms = [TargetPlatform.android, TargetPlatform.iOS];
+  static const _mobilePlatforms = [
+    TargetPlatform.android,
+    TargetPlatform.iOS,
+  ];
 
   static bool get isDesktop =>
       _desktopPlatforms.contains(defaultTargetPlatform);
