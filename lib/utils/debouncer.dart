@@ -1,4 +1,4 @@
-part of commons;
+part of utils;
 
 class Debouncer {
   Debouncer(this.interval);

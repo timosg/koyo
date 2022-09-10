@@ -1,6 +1,6 @@
 part of core;
 
-extension BrightnessExension on Brightness {
+extension BrightnessExtension on Brightness {
   /// Check if this is equal to [Brightness.dark]
   bool get isDark => this == Brightness.dark;
 

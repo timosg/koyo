@@ -2,8 +2,8 @@
 
 part of styles;
 
-class _Spacings {
-  const _Spacings();
+class _Spacing {
+  const _Spacing();
   final double xs = 6; // Value before v0.4.0 = 10
   final double sm = 12;
   final double md = 16;
@@ -12,8 +12,8 @@ class _Spacings {
   final double xxl = 32;
 }
 
-class _Corners {
-  const _Corners();
+class _Radius {
+  const _Radius();
   final double xs = 2;
   final double sm = 4;
   final double md = 8;

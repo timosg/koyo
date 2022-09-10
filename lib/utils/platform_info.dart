@@ -1,4 +1,4 @@
-part of commons;
+part of utils;
 
 class PlatformInfo {
   static const _desktopPlatforms = [

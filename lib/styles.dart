@@ -9,10 +9,10 @@ part 'styles/shadows.dart';
 
 class _Styles {
   const _Styles();
+  final spacing = const _Spacing();
+  final radius = const _Radius();
   final shadows = const _Shadows();
-  final spacings = const _Spacings();
   final breakpoints = const _Breakpoints();
-  final corners = const _Corners();
 }
 
 const $styles = _Styles();

@@ -1,4 +1,4 @@
-part of commons;
+part of utils;
 
 class SetOrientation {
   static final portrait = _Portrait();
