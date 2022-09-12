@@ -1,4 +1,8 @@
+library random;
+
 import 'dart:math';
+
+int _seed = DateTime.now().millisecondsSinceEpoch;
 
 extension RandomExtension on Random {
   int getInt(int min, int max) {
@@ -18,3 +22,5 @@ extension RandomExtension on Random {
     return remove ? list.removeAt(i) : list[i];
   }
 }
+
+final $random = Random(_seed);
