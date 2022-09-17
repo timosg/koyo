@@ -8,12 +8,11 @@ part 'styles/constants.dart';
 part 'styles/shadows.dart';
 
 class _Styles {
-  const _Styles();
-  final spacing = const _Spacing();
+  final spacing = _Spacing();
   final radius = const _Radius();
   final shadows = const _Shadows();
   final breakpoints = const _Breakpoints();
 }
 
 // Globals
-const $styles = _Styles();
+final $styles = _Styles();

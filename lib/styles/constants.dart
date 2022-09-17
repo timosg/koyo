@@ -3,8 +3,37 @@
 part of styles;
 
 class _Spacing {
-  const _Spacing();
-  final double xs = 6; // Value before v0.4.0 = 10
+  _Spacing();
+  final value = const _SpacingValue();
+  late final all = _SpacingAll(value);
+  late final vertical = _SpacingVertical(value);
+}
+
+class _SpacingAll {
+  _SpacingAll(this.value);
+  _SpacingValue value;
+  late final EdgeInsets xs = EdgeInsets.all(value.xs);
+  late final EdgeInsets sm = EdgeInsets.all(value.sm);
+  late final EdgeInsets md = EdgeInsets.all(value.md);
+  late final EdgeInsets lg = EdgeInsets.all(value.lg);
+  late final EdgeInsets xl = EdgeInsets.all(value.xl);
+  late final EdgeInsets xxl = EdgeInsets.all(value.xxl);
+}
+
+class _SpacingVertical {
+  _SpacingVertical(this.value);
+  _SpacingValue value;
+  late final EdgeInsets xs = EdgeInsets.symmetric(vertical: value.xs);
+  late final EdgeInsets sm = EdgeInsets.symmetric(vertical: value.sm);
+  late final EdgeInsets md = EdgeInsets.symmetric(vertical: value.md);
+  late final EdgeInsets lg = EdgeInsets.symmetric(vertical: value.lg);
+  late final EdgeInsets xl = EdgeInsets.symmetric(vertical: value.xl);
+  late final EdgeInsets xxl = EdgeInsets.symmetric(vertical: value.xxl);
+}
+
+class _SpacingValue {
+  const _SpacingValue();
+  final double xs = 6;
   final double sm = 12;
   final double md = 16;
   final double lg = 20;
