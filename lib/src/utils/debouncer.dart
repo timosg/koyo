@@ -4,7 +4,7 @@ import 'dart:ui';
 class Debouncer {
   Debouncer();
 
-  final Duration interval = const Duration(milliseconds: 250);
+  final Duration interval = const Duration(milliseconds: 400);
   VoidCallback? _action;
   Timer? _timer;
 
