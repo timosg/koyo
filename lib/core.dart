@@ -5,10 +5,7 @@ import 'package:koyo/src/constants.dart';
 import 'package:koyo/src/styles/styles.dart';
 import 'package:koyo/src/utils/utils.dart';
 
-export 'src/extensions/brightness.dart';
-export 'src/extensions/color.dart';
-export 'src/extensions/int.dart';
-export 'src/extensions/string.dart';
+export 'src/extensions/extensions.dart';
 export 'src/types.dart';
 export 'src/utils/utils.dart';
 
