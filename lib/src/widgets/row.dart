@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:koyo/src/widgets/widgets.dart';
+part of widgets;
 
 class SpacedRow extends StatelessWidget {
   const SpacedRow({

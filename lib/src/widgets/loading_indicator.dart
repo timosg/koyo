@@ -1,6 +1,4 @@
-import 'dart:io' show Platform;
-
-import 'package:flutter/material.dart';
+part of widgets;
 
 class LoadingIndicator extends StatelessWidget {
   const LoadingIndicator({super.key, this.androidScale = 0.5});

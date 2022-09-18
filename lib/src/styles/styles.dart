@@ -1,9 +1,13 @@
-import 'package:koyo/src/styles/constants.dart';
-import 'package:koyo/src/styles/shadows.dart';
+library styles;
+
+import 'package:flutter/material.dart';
+
+part 'constants.dart';
+part 'shadows.dart';
 
 class Styles {
-  final spacing = Spacing();
-  final radius = Radius();
-  final shadows = Shadows();
-  final breakpoints = Breakpoints();
+  final spacing = _Spacing();
+  final radius = _Radius();
+  final shadows = _Shadows();
+  final breakpoints = _Breakpoints();
 }
