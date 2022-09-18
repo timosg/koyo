@@ -1,7 +1,5 @@
-library animations;
-
-part 'durations.dart';
+import 'package:koyo/src/animations/durations.dart';
 
 class Animations {
-  final durations = _Durations();
+  final durations = Durations();
 }

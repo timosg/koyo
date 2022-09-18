@@ -1,9 +1,8 @@
 // ignore_for_file: avoid_field_initializers_in_const_classes
 
-part of styles;
+import 'package:flutter/material.dart';
 
-class _Spacing {
-  _Spacing();
+class Spacing {
   final value = const _SpacingValue();
   late final all = _SpacingAll(value);
   late final vertical = _SpacingVertical(value);
@@ -18,6 +17,24 @@ class _SpacingAll {
   late final EdgeInsets lg = EdgeInsets.all(value.lg);
   late final EdgeInsets xl = EdgeInsets.all(value.xl);
   late final EdgeInsets xxl = EdgeInsets.all(value.xxl);
+}
+
+class Radius {
+  final double xs = 2;
+  final double sm = 4;
+  final double md = 8;
+  final double lg = 16;
+  final double xl = 32;
+  final double xxl = 64;
+}
+
+class Breakpoints {
+  final double xs = 576;
+  final double sm = 768;
+  final double md = 992;
+  final double lg = 1200;
+  final double xl = 1400;
+  final double xxl = 1536;
 }
 
 class _SpacingVertical {
@@ -39,24 +56,4 @@ class _SpacingValue {
   final double lg = 20;
   final double xl = 24;
   final double xxl = 32;
-}
-
-class _Radius {
-  const _Radius();
-  final double xs = 2;
-  final double sm = 4;
-  final double md = 8;
-  final double lg = 16;
-  final double xl = 32;
-  final double xxl = 64;
-}
-
-class _Breakpoints {
-  const _Breakpoints();
-  final double xs = 576;
-  final double sm = 768;
-  final double md = 992;
-  final double lg = 1200;
-  final double xl = 1400;
-  final double xxl = 1536;
 }

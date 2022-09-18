@@ -1,4 +1,5 @@
-part of widgets;
+import 'package:flutter/material.dart';
+import 'package:koyo/core.dart';
 
 class Space extends StatelessWidget {
   const Space({super.key, this.h, this.w});

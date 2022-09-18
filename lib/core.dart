@@ -1,11 +1,9 @@
-// ignore_for_file: always_use_package_imports
-
 import 'dart:math';
 
-import 'src/animations/animations.dart';
-import 'src/constants.dart';
-import 'src/styles/styles.dart';
-import 'src/utils/utils.dart';
+import 'package:koyo/src/animations/animations.dart';
+import 'package:koyo/src/constants.dart';
+import 'package:koyo/src/styles/styles.dart';
+import 'package:koyo/src/utils/utils.dart';
 
 export 'src/extensions/brightness.dart';
 export 'src/extensions/color.dart';
@@ -13,17 +11,6 @@ export 'src/extensions/int.dart';
 export 'src/extensions/string.dart';
 export 'src/types.dart';
 export 'src/utils/utils.dart';
-
-// library core;
-
-// import 'package:flutter/material.dart';
-
-// part 'core/extensions/brightness.dart';
-// part 'core/extensions/color.dart';
-// part 'core/extensions/int.dart';
-// part 'core/extensions/string.dart';
-
-// part 'src/types.dart';
 
 // // GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 // // BuildContext get context => navigatorKey.currentContext!;

@@ -1,7 +1,5 @@
 // ignore_for_file: lines_longer_than_80_chars, avoid_field_initializers_in_const_classes
 
-part of styles;
-
 // 100% — FF
 // 95% — F2
 // 90% — E6
@@ -25,9 +23,9 @@ part of styles;
 // 4% — 0A
 // 0% — 00
 
-class _Shadows {
-  const _Shadows();
+import 'package:flutter/material.dart';
 
+class Shadows {
   final _luminanceTreshold = 0.179;
 
   // xs: '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)',
