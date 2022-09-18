@@ -1,6 +1,6 @@
 part of utils;
 
-class _PlatformInfo {
+class PlatformInfo {
   final _desktopPlatforms = [
     TargetPlatform.fuchsia,
     TargetPlatform.macOS,

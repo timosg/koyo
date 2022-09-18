@@ -1,6 +1,6 @@
 part of utils;
 
-class _Orientation {
+class Orientation {
   final portrait = _Portrait();
   final landscape = _Landscape();
 }
