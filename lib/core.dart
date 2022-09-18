@@ -12,6 +12,7 @@ export 'src/extensions/color.dart';
 export 'src/extensions/int.dart';
 export 'src/extensions/string.dart';
 export 'src/types.dart';
+export 'src/utils/utils.dart';
 
 // library core;
 

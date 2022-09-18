@@ -1,4 +1,4 @@
-part of utils;
+import 'package:flutter/scheduler.dart';
 
 class Delayer {
   const Delayer();

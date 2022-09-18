@@ -1,4 +1,4 @@
-part of utils;
+import 'package:flutter/services.dart';
 
 class Orientation {
   final portrait = _Portrait();

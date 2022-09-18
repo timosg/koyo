@@ -1,4 +1,5 @@
-part of utils;
+import 'dart:async';
+import 'dart:ui';
 
 class Debouncer {
   Debouncer(this.interval);
