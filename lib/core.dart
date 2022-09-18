@@ -1,3 +1,5 @@
+library core;
+
 import 'dart:math';
 
 import 'package:koyo/src/animations/animations.dart';
