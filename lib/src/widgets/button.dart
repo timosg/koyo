@@ -15,10 +15,22 @@ class SimpleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final foregroundColor =
+        color ?? (theme.brightness.isDark ? Colors.white : Colors.black);
+    final textStyle = theme.cupertinoOverrideTheme!.textTheme!.textStyle
+        .copyWith(color: foregroundColor);
+
     return CupertinoButton(
       onPressed: onPressed,
-      // color: color ?? (theme.brightness.isDark ? Colors.white : Colors.black),
-      child: child,
+      child: DefaultTextStyle(
+        style: textStyle,
+        child: IconTheme(
+          data: IconThemeData(
+            color: foregroundColor,
+          ),
+          child: child,
+        ),
+      ),
     );
   }
 }
