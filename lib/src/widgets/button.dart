@@ -17,7 +17,7 @@ class SimpleButton extends StatelessWidget {
     final theme = Theme.of(context);
     return CupertinoButton(
       onPressed: onPressed,
-      color: color ?? (theme.brightness.isDark ? Colors.white : Colors.black),
+      // color: color ?? (theme.brightness.isDark ? Colors.white : Colors.black),
       child: child,
     );
   }
