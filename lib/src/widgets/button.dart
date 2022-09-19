@@ -1,7 +1,7 @@
 part of widgets;
 
-class Button extends StatelessWidget {
-  const Button({
+class SimpleButton extends StatelessWidget {
+  const SimpleButton({
     super.key,
     required this.child,
     this.onPressed,
