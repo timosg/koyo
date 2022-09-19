@@ -22,14 +22,23 @@ class SimpleList<T> extends StatelessWidget {
       scrollDirection: axis,
       child: Padding(
         padding: padding,
-        child: Column(
-          children: <Widget>[
-            for (int index = 0; index < items.length; index++) ...[
-              if (index != 0) HSpace(h: spacing),
-              builder(context, items[index], index),
-            ]
-          ],
-        ),
+        child: axis == Axis.vertical
+            ? Column(
+                children: <Widget>[
+                  for (int index = 0; index < items.length; index++) ...[
+                    if (index != 0) HSpace(h: spacing),
+                    builder(context, items[index], index),
+                  ]
+                ],
+              )
+            : Row(
+                children: <Widget>[
+                  for (int index = 0; index < items.length; index++) ...[
+                    if (index != 0) WSpace(w: spacing),
+                    builder(context, items[index], index),
+                  ]
+                ],
+              ),
       ),
     );
   }
