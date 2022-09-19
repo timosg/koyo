@@ -19,6 +19,7 @@ class SimpleList<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: axis,
       child: Padding(
         padding: padding,
         child: Column(
