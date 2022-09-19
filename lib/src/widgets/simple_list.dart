@@ -7,12 +7,14 @@ class SimpleList<T> extends StatelessWidget {
     required this.builder,
     this.spacing,
     this.padding = EdgeInsets.zero,
+    this.axis = Axis.vertical,
   });
 
   final List<T> items;
   final Widget Function(BuildContext, T, int) builder;
   final double? spacing;
   final EdgeInsets padding;
+  final Axis axis;
 
   @override
   Widget build(BuildContext context) {
