@@ -6,11 +6,23 @@ class SimpleButton extends StatelessWidget {
     required this.child,
     this.onPressed,
     this.color,
+    this.padding,
+    this.disabledColor = CupertinoColors.quaternarySystemFill,
+    this.minSize = kMinInteractiveDimensionCupertino,
+    this.pressedOpacity = 0.4,
+    this.borderRadius = const BorderRadius.all(Radius.circular(8)),
+    this.alignment = Alignment.center,
   });
 
   final void Function()? onPressed;
   final Widget child;
   final Color? color;
+  final EdgeInsetsGeometry? padding;
+  final Color disabledColor;
+  final double? minSize;
+  final double? pressedOpacity;
+  final BorderRadius? borderRadius;
+  final AlignmentGeometry alignment;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +34,12 @@ class SimpleButton extends StatelessWidget {
         cupertinoTheme.textTheme.textStyle.copyWith(color: foregroundColor);
 
     return CupertinoButton(
+      padding: padding,
+      disabledColor: disabledColor,
+      minSize: minSize,
+      pressedOpacity: pressedOpacity,
+      borderRadius: borderRadius,
+      alignment: alignment,
       onPressed: onPressed,
       child: DefaultTextStyle(
         style: textStyle,
