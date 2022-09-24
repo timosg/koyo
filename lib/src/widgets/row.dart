@@ -6,6 +6,7 @@ class SpacedRow extends StatelessWidget {
     this.children = const <Widget>[],
     this.padding = EdgeInsets.zero,
     this.spacing,
+    this.expand,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -17,6 +18,7 @@ class SpacedRow extends StatelessWidget {
   final List<Widget> children;
   final EdgeInsets padding;
   final double? spacing;
+  final bool? expand;
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
   final CrossAxisAlignment crossAxisAlignment;
@@ -26,7 +28,9 @@ class SpacedRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    final mediaQuery = MediaQuery.of(context);
+    return Container(
+      height: expand == true ? mediaQuery.size.height : null,
       padding: padding,
       child: Row(
         mainAxisAlignment: mainAxisAlignment,
