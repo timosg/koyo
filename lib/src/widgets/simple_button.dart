@@ -5,6 +5,7 @@ class SimpleButton extends StatelessWidget {
     super.key,
     required this.child,
     required this.onPressed,
+    this.fullWidth = false,
     this.backgroundColor,
     this.foregroundColor,
     this.padding,
@@ -16,6 +17,7 @@ class SimpleButton extends StatelessWidget {
   });
 
   final void Function()? onPressed;
+  final bool fullWidth;
   final Widget child;
   final Color? backgroundColor;
   final Color? foregroundColor;
@@ -39,22 +41,25 @@ class SimpleButton extends StatelessWidget {
     final textStyle = cupertinoTheme.textTheme.textStyle
         .copyWith(color: currentForegroundColor);
 
-    return CupertinoButton(
-      color: backgroundColor,
-      padding: padding,
-      disabledColor: disabledColor,
-      minSize: minSize,
-      pressedOpacity: pressedOpacity,
-      borderRadius: borderRadius,
-      alignment: alignment,
-      onPressed: onPressed,
-      child: DefaultTextStyle(
-        style: textStyle,
-        child: IconTheme(
-          data: IconThemeData(
-            color: currentForegroundColor,
+    return SizedBox(
+      width: fullWidth ? double.infinity : null,
+      child: CupertinoButton(
+        color: backgroundColor,
+        padding: padding,
+        disabledColor: disabledColor,
+        minSize: minSize,
+        pressedOpacity: pressedOpacity,
+        borderRadius: borderRadius,
+        alignment: alignment,
+        onPressed: onPressed,
+        child: DefaultTextStyle(
+          style: textStyle,
+          child: IconTheme(
+            data: IconThemeData(
+              color: currentForegroundColor,
+            ),
+            child: child,
           ),
-          child: child,
         ),
       ),
     );
