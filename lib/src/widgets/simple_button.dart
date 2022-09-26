@@ -5,7 +5,8 @@ class SimpleButton extends StatelessWidget {
     super.key,
     required this.child,
     this.onPressed,
-    this.color,
+    this.backgroundColor,
+    this.foregroundColor,
     this.padding,
     this.disabledColor = CupertinoColors.quaternarySystemFill,
     this.minSize = kMinInteractiveDimensionCupertino,
@@ -16,7 +17,8 @@ class SimpleButton extends StatelessWidget {
 
   final void Function()? onPressed;
   final Widget child;
-  final Color? color;
+  final Color? backgroundColor;
+  final Color? foregroundColor;
   final EdgeInsetsGeometry? padding;
   final Color disabledColor;
   final double? minSize;
@@ -28,12 +30,13 @@ class SimpleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final cupertinoTheme = CupertinoTheme.of(context);
-    final foregroundColor =
-        color ?? (theme.brightness.isDark ? Colors.white : Colors.black);
-    final textStyle =
-        cupertinoTheme.textTheme.textStyle.copyWith(color: foregroundColor);
+    final currentForegroundColor = foregroundColor ??
+        (theme.brightness.isDark ? Colors.white : Colors.black);
+    final textStyle = cupertinoTheme.textTheme.textStyle
+        .copyWith(color: currentForegroundColor);
 
     return CupertinoButton(
+      color: backgroundColor,
       padding: padding,
       disabledColor: disabledColor,
       minSize: minSize,
@@ -45,7 +48,7 @@ class SimpleButton extends StatelessWidget {
         style: textStyle,
         child: IconTheme(
           data: IconThemeData(
-            color: foregroundColor,
+            color: currentForegroundColor,
           ),
           child: child,
         ),

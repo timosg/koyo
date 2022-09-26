@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:koyo/core.dart';
 
 part 'src/widgets/simple_button.dart';
-part 'src/widgets/filled_button.dart';
 part 'src/widgets/empty.dart';
 part 'src/widgets/column.dart';
 part 'src/widgets/row.dart';
