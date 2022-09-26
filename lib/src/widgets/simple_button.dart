@@ -4,7 +4,7 @@ class SimpleButton extends StatelessWidget {
   const SimpleButton({
     super.key,
     required this.child,
-    this.onPressed,
+    required this.onPressed,
     this.backgroundColor,
     this.foregroundColor,
     this.padding,
@@ -44,7 +44,15 @@ class SimpleButton extends StatelessWidget {
       borderRadius: borderRadius,
       alignment: alignment,
       onPressed: onPressed,
-      child: child,
+      child: DefaultTextStyle(
+        style: textStyle,
+        child: IconTheme(
+          data: IconThemeData(
+            color: currentForegroundColor,
+          ),
+          child: child,
+        ),
+      ),
     );
   }
 }
