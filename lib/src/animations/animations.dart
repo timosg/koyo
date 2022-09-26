@@ -1,7 +1,9 @@
 library animations;
 
-part 'durations.dart';
+part 'value.dart';
+part 'duration.dart';
 
 class Animations {
-  final durations = _Durations();
+  final value = _Value();
+  final duration = _Duration();
 }
