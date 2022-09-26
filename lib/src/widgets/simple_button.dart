@@ -44,15 +44,7 @@ class SimpleButton extends StatelessWidget {
       borderRadius: borderRadius,
       alignment: alignment,
       onPressed: onPressed,
-      child: DefaultTextStyle(
-        style: textStyle,
-        child: IconTheme(
-          data: IconThemeData(
-            color: currentForegroundColor,
-          ),
-          child: child,
-        ),
-      ),
+      child: child,
     );
   }
 }
