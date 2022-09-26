@@ -31,7 +31,11 @@ class SimpleButton extends StatelessWidget {
     final theme = Theme.of(context);
     final cupertinoTheme = CupertinoTheme.of(context);
     final currentForegroundColor = foregroundColor ??
-        (theme.brightness.isDark ? Colors.white : Colors.black);
+        (backgroundColor != null
+            ? backgroundColor!.isLight
+                ? Colors.black
+                : Colors.white
+            : (theme.brightness.isDark ? Colors.white : Colors.black));
     final textStyle = cupertinoTheme.textTheme.textStyle
         .copyWith(color: currentForegroundColor);
 
