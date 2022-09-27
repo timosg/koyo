@@ -7,14 +7,16 @@ class LoadingOverlay extends StatelessWidget {
     required this.child,
     this.overlayOpacity = 0.75,
     this.transitionDuration = 200,
+    this.overlayBlur = 0,
     this.overlayColor,
   });
 
   final bool visible;
   final Widget child;
   final double overlayOpacity;
-  final Color? overlayColor;
+  final double overlayBlur;
   final int transitionDuration;
+  final Color? overlayColor;
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +32,17 @@ class LoadingOverlay extends StatelessWidget {
             child: AnimatedSwitcher(
               duration: Duration(milliseconds: transitionDuration),
               child: visible
-                  ? Container(
-                      height: mediaQuery.size.height,
-                      width: mediaQuery.size.width,
-                      color: backgroundColor.withOpacity(overlayOpacity),
-                      child: const Center(child: LoadingIndicator()),
+                  ? BackdropFilter(
+                      filter: ImageFilter.blur(
+                        sigmaX: overlayBlur,
+                        sigmaY: overlayBlur,
+                      ),
+                      child: Container(
+                        height: mediaQuery.size.height,
+                        width: mediaQuery.size.width,
+                        color: backgroundColor.withOpacity(overlayOpacity),
+                        child: const Center(child: LoadingIndicator()),
+                      ),
                     )
                   : const SizedBox.shrink(),
             ),
