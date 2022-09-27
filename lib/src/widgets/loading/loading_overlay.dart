@@ -5,9 +5,9 @@ class LoadingOverlay extends StatelessWidget {
     super.key,
     required this.visible,
     required this.child,
-    this.overlayOpacity = 0.8,
+    this.overlayOpacity = 0.75,
     this.overlayColor,
-    this.transitionDuration = 200,
+    this.transitionDuration = 0,
   });
 
   final bool visible;
