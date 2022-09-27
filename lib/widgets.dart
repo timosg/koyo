@@ -10,6 +10,7 @@ part 'src/widgets/simple_button.dart';
 part 'src/widgets/empty.dart';
 part 'src/widgets/column.dart';
 part 'src/widgets/row.dart';
-part 'src/widgets/loading_indicator.dart';
+part 'src/widgets/loading/loading_indicator.dart';
+part 'src/widgets/loading/loading_overlay.dart';
 part 'src/widgets/simple_list.dart';
 part 'src/widgets/space.dart';
