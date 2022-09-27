@@ -6,7 +6,7 @@ class LoadingOverlay extends StatelessWidget {
     required this.visible,
     required this.child,
     this.overlayOpacity = 0.75,
-    this.transitionDuration = 0,
+    this.transitionDuration = 200,
     this.overlayColor,
   });
 
