@@ -23,29 +23,32 @@ class LoadingOverlay extends StatelessWidget {
     final theme = Theme.of(context);
     final mediaQuery = MediaQuery.of(context);
     final backgroundColor = overlayColor ?? theme.backgroundColor;
-    return Stack(
-      children: [
-        Positioned.fill(child: child),
-        Positioned.fill(
-          child: AnimatedSwitcher(
-            duration: Duration(milliseconds: transitionDuration),
-            child: visible
-                ? BackdropFilter(
-                    filter: ImageFilter.blur(
-                      sigmaX: overlayBlur,
-                      sigmaY: overlayBlur,
-                    ),
-                    child: Container(
-                      height: mediaQuery.size.height,
-                      width: mediaQuery.size.width,
-                      color: backgroundColor.withOpacity(overlayOpacity),
-                      child: const Center(child: LoadingIndicator()),
-                    ),
-                  )
-                : const SizedBox.shrink(),
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Stack(
+        children: [
+          Positioned.fill(child: child),
+          Positioned.fill(
+            child: AnimatedSwitcher(
+              duration: Duration(milliseconds: transitionDuration),
+              child: visible
+                  ? BackdropFilter(
+                      filter: ImageFilter.blur(
+                        sigmaX: overlayBlur,
+                        sigmaY: overlayBlur,
+                      ),
+                      child: Container(
+                        height: mediaQuery.size.height,
+                        width: mediaQuery.size.width,
+                        color: backgroundColor.withOpacity(overlayOpacity),
+                        child: const Center(child: LoadingIndicator()),
+                      ),
+                    )
+                  : const Empty(),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
