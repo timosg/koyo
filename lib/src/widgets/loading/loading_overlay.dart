@@ -27,15 +27,16 @@ class LoadingOverlay extends StatelessWidget {
         children: [
           Positioned.fill(child: child),
           Positioned.fill(
-            child: AnimatedOpacity(
-              opacity: visible ? 1.0 : 0.0,
+            child: AnimatedSwitcher(
               duration: Duration(milliseconds: transitionDuration),
-              child: Container(
-                height: mediaQuery.size.height,
-                width: mediaQuery.size.width,
-                color: backgroundColor.withOpacity(overlayOpacity),
-                child: const Center(child: LoadingIndicator()),
-              ),
+              child: visible
+                  ? Container(
+                      height: mediaQuery.size.height,
+                      width: mediaQuery.size.width,
+                      color: backgroundColor.withOpacity(overlayOpacity),
+                      child: const Center(child: LoadingIndicator()),
+                    )
+                  : const SizedBox.shrink(),
             ),
           ),
         ],
