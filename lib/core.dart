@@ -17,6 +17,9 @@ export 'src/utils/utils.dart';
 // Globals
 final $animations = Animations();
 final $random = Random(RND_SEED);
-final $styles = Styles();
 final $orientation = Orientation();
 final $platform = PlatformInfo();
+
+// Styles
+final $styles = Styles(); // - alias
+final $ui = Styles(); // - alias

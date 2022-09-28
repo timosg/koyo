@@ -3,14 +3,22 @@
 part of styles;
 
 class _Spacing {
-  final value = const _SpacingValue();
-  late final all = _SpacingAll(value);
-  late final vertical = _SpacingVertical(value);
-  late final horizontal = _SpacingHorizontal(value);
-  late final left = _SpacingLeft(value);
-  late final right = _SpacingRight(value);
-  late final top = _SpacingTop(value);
-  late final bottom = _SpacingBottom(value);
+  final _value = const _SpacingValue();
+
+  late final double xs = _value.xs;
+  late final double sm = _value.sm;
+  late final double md = _value.md;
+  late final double lg = _value.lg;
+  late final double xl = _value.xl;
+  late final double xxl = _value.xxl;
+
+  late final all = _SpacingAll(_value);
+  late final vertical = _SpacingVertical(_value);
+  late final horizontal = _SpacingHorizontal(_value);
+  late final left = _SpacingLeft(_value);
+  late final right = _SpacingRight(_value);
+  late final top = _SpacingTop(_value);
+  late final bottom = _SpacingBottom(_value);
 }
 
 // ** Spacing utility classes **

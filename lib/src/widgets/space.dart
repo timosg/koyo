@@ -22,7 +22,7 @@ class HSpace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Space(h: h ?? $styles.spacing.value.md);
+    return Space(h: h ?? $styles.spacing.md);
   }
 }
 
@@ -33,6 +33,6 @@ class WSpace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Space(w: w ?? $styles.spacing.value.md);
+    return Space(w: w ?? $styles.spacing.md);
   }
 }

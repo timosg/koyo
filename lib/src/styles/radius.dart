@@ -3,8 +3,16 @@
 part of styles;
 
 class _Radius {
-  final value = const _RadiusValue();
-  late final circular = _RadiusCircular(value);
+  final _value = const _RadiusValue();
+
+  late final double xs = _value.xs;
+  late final double sm = _value.sm;
+  late final double md = _value.md;
+  late final double lg = _value.lg;
+  late final double xl = _value.xl;
+  late final double xxl = _value.xxl;
+
+  late final circular = _RadiusCircular(_value);
 }
 
 // ** Utility classes **

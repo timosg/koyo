@@ -20,7 +20,6 @@ class SimpleList<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return scrollDirection == Axis.vertical
         ? SingleChildScrollView(
-            scrollDirection: scrollDirection,
             child: Padding(
               padding: padding,
               child: Column(
