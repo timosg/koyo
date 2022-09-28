@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:koyo/core.dart';
 
-part 'src/widgets/koyo_provider.dart';
+part 'src/widgets/koyo.dart';
 part 'src/widgets/buttons/simple_button.dart';
 part 'src/widgets/misc/empty.dart';
 part 'src/widgets/layout/column.dart';

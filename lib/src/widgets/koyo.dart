@@ -1,7 +1,7 @@
 part of widgets;
 
-class KoyoProvider extends StatelessWidget {
-  const KoyoProvider({
+class Koyo extends StatelessWidget {
+  const Koyo({
     super.key,
     required this.child,
     this.textScaleFactor = 1,
