@@ -20,6 +20,7 @@ class SimpleList<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return scrollDirection == Axis.vertical
         ? ListView(
+            shrinkWrap: true,
             children: <Widget>[
               for (int index = 0; index < items.length; index++) ...[
                 if (index != 0) HSpace(h: spacing),
@@ -28,6 +29,7 @@ class SimpleList<T> extends StatelessWidget {
             ],
           )
         : ListView(
+            shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               for (int index = 0; index < items.length; index++) ...[
