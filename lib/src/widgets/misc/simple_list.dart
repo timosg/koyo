@@ -9,10 +9,12 @@ class SimpleList<T> extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.scrollDirection = Axis.vertical,
     this.expand = false,
+    this.shrinkWrap = true,
   });
 
   final List<T> items;
   final bool expand;
+  final bool shrinkWrap;
   final Widget Function(BuildContext, T, int) builder;
   final double? spacing;
   final EdgeInsets padding;
@@ -23,7 +25,7 @@ class SimpleList<T> extends StatelessWidget {
     final isVertical = scrollDirection == Axis.vertical;
     final simpleList = ListView(
       scrollDirection: scrollDirection,
-      shrinkWrap: true,
+      shrinkWrap: shrinkWrap,
       children: <Widget>[
         for (int index = 0; index < items.length; index++) ...[
           if (index != 0) isVertical ? HSpace(h: spacing) : WSpace(w: spacing),
