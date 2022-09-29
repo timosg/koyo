@@ -8,7 +8,7 @@ class SimpleList<T> extends StatelessWidget {
     this.spacing,
     this.padding = EdgeInsets.zero,
     this.scrollDirection = Axis.vertical,
-    this.expand = true,
+    this.expand = false,
   });
 
   final List<T> items;
