@@ -21,19 +21,16 @@ class SimpleList<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isVertical = scrollDirection == Axis.vertical;
-    return Expanded(
-      flex: expand ? 1 : 0,
-      child: ListView(
-        scrollDirection: scrollDirection,
-        shrinkWrap: true,
-        children: <Widget>[
-          for (int index = 0; index < items.length; index++) ...[
-            if (index != 0)
-              isVertical ? HSpace(h: spacing) : WSpace(w: spacing),
-            builder(context, items[index], index),
-          ]
-        ],
-      ),
+    final simpleList = ListView(
+      scrollDirection: scrollDirection,
+      shrinkWrap: true,
+      children: <Widget>[
+        for (int index = 0; index < items.length; index++) ...[
+          if (index != 0) isVertical ? HSpace(h: spacing) : WSpace(w: spacing),
+          builder(context, items[index], index),
+        ]
+      ],
     );
+    return expand ? Expanded(child: simpleList) : simpleList;
   }
 }
