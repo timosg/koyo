@@ -13,12 +13,16 @@ class _Spacing {
   late final double xxl = _value.xxl;
 
   late final all = _SpacingAll(_value);
-  late final vertical = _SpacingVertical(_value);
-  late final horizontal = _SpacingHorizontal(_value);
   late final left = _SpacingLeft(_value);
   late final right = _SpacingRight(_value);
   late final top = _SpacingTop(_value);
   late final bottom = _SpacingBottom(_value);
+  late final vertical = _SpacingVertical(_value);
+  late final verticalAndRight = _SpacingVerticalAndRight(_value);
+  late final verticalAndTLeft = _SpacingVerticalAndLeft(_value);
+  late final horizontal = _SpacingHorizontal(_value);
+  late final horizontalAndTop = _SpacingHorizontalAndTop(_value);
+  late final horizontalAndBottom = _SpacingHorizontalAndBottom(_value);
 }
 
 // ** Spacing utility classes **
@@ -55,6 +59,40 @@ class _SpacingVertical {
   late final EdgeInsets xxl = EdgeInsets.symmetric(vertical: value.xxl);
 }
 
+class _SpacingVerticalAndRight {
+  _SpacingVerticalAndRight(this.value);
+  _SpacingValue value;
+  late final EdgeInsets xs =
+      EdgeInsets.only(top: value.xs, bottom: value.xs, right: value.xs);
+  late final EdgeInsets sm =
+      EdgeInsets.only(top: value.sm, bottom: value.sm, right: value.sm);
+  late final EdgeInsets md =
+      EdgeInsets.only(top: value.md, bottom: value.md, right: value.md);
+  late final EdgeInsets lg =
+      EdgeInsets.only(top: value.lg, bottom: value.lg, right: value.lg);
+  late final EdgeInsets xl =
+      EdgeInsets.only(top: value.xl, bottom: value.xl, right: value.xl);
+  late final EdgeInsets xxl =
+      EdgeInsets.only(top: value.xxl, bottom: value.xxl, right: value.xxl);
+}
+
+class _SpacingVerticalAndLeft {
+  _SpacingVerticalAndLeft(this.value);
+  _SpacingValue value;
+  late final EdgeInsets xs =
+      EdgeInsets.only(top: value.xs, bottom: value.xs, left: value.xs);
+  late final EdgeInsets sm =
+      EdgeInsets.only(top: value.sm, bottom: value.sm, left: value.sm);
+  late final EdgeInsets md =
+      EdgeInsets.only(top: value.md, bottom: value.md, left: value.md);
+  late final EdgeInsets lg =
+      EdgeInsets.only(top: value.lg, bottom: value.lg, left: value.lg);
+  late final EdgeInsets xl =
+      EdgeInsets.only(top: value.xl, bottom: value.xl, left: value.xl);
+  late final EdgeInsets xxl =
+      EdgeInsets.only(top: value.xxl, bottom: value.xxl, left: value.xxl);
+}
+
 class _SpacingHorizontal {
   _SpacingHorizontal(this.value);
   _SpacingValue value;
@@ -64,6 +102,40 @@ class _SpacingHorizontal {
   late final EdgeInsets lg = EdgeInsets.symmetric(horizontal: value.lg);
   late final EdgeInsets xl = EdgeInsets.symmetric(horizontal: value.xl);
   late final EdgeInsets xxl = EdgeInsets.symmetric(horizontal: value.xxl);
+}
+
+class _SpacingHorizontalAndTop {
+  _SpacingHorizontalAndTop(this.value);
+  _SpacingValue value;
+  late final EdgeInsets xs =
+      EdgeInsets.only(left: value.xs, right: value.xs, top: value.xs);
+  late final EdgeInsets sm =
+      EdgeInsets.only(left: value.sm, right: value.sm, top: value.sm);
+  late final EdgeInsets md =
+      EdgeInsets.only(left: value.md, right: value.md, top: value.md);
+  late final EdgeInsets lg =
+      EdgeInsets.only(left: value.lg, right: value.lg, top: value.lg);
+  late final EdgeInsets xl =
+      EdgeInsets.only(left: value.xl, right: value.xl, top: value.xl);
+  late final EdgeInsets xxl =
+      EdgeInsets.only(left: value.xxl, right: value.xxl, top: value.xxl);
+}
+
+class _SpacingHorizontalAndBottom {
+  _SpacingHorizontalAndBottom(this.value);
+  _SpacingValue value;
+  late final EdgeInsets xs =
+      EdgeInsets.only(left: value.xs, right: value.xs, bottom: value.xs);
+  late final EdgeInsets sm =
+      EdgeInsets.only(left: value.sm, right: value.sm, bottom: value.sm);
+  late final EdgeInsets md =
+      EdgeInsets.only(left: value.md, right: value.md, bottom: value.md);
+  late final EdgeInsets lg =
+      EdgeInsets.only(left: value.lg, right: value.lg, bottom: value.lg);
+  late final EdgeInsets xl =
+      EdgeInsets.only(left: value.xl, right: value.xl, bottom: value.xl);
+  late final EdgeInsets xxl =
+      EdgeInsets.only(left: value.xxl, right: value.xxl, bottom: value.xxl);
 }
 
 class _SpacingLeft {
