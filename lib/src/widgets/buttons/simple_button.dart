@@ -37,8 +37,8 @@ class SimpleButton extends StatelessWidget {
                 ? Colors.black
                 : Colors.white
             : (theme.brightness.isDark ? Colors.white : Colors.black));
-    final textStyle =
-        theme.textTheme.button!.copyWith(color: currentForegroundColor);
+    // final textStyle =
+    //     theme.textTheme.button!.copyWith(color: currentForegroundColor);
 
     return SizedBox(
       width: fullWidth ? double.infinity : null,
@@ -51,14 +51,13 @@ class SimpleButton extends StatelessWidget {
         borderRadius: borderRadius,
         alignment: alignment,
         onPressed: onPressed,
-        child: DefaultTextStyle(
-          style: textStyle,
-          child: IconTheme(
-            data: IconThemeData(
+        child: Theme(
+          data: theme.copyWith(
+            iconTheme: theme.iconTheme.copyWith(
               color: currentForegroundColor,
             ),
-            child: child,
           ),
+          child: child,
         ),
       ),
     );
