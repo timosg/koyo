@@ -37,8 +37,6 @@ class SimpleButton extends StatelessWidget {
                 ? Colors.black
                 : Colors.white
             : (theme.brightness.isDark ? Colors.white : Colors.black));
-    // final textStyle =
-    //     theme.textTheme.button!.copyWith(color: currentForegroundColor);
 
     return SizedBox(
       width: fullWidth ? double.infinity : null,
