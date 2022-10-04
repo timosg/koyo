@@ -7,7 +7,10 @@ class Delayer {
     SchedulerBinding.instance.addPostFrameCallback((Duration _) => callback());
   }
 
-  void delay(Duration duration, void Function() callback) {
+  void delay(
+    void Function() callback, {
+    Duration duration = const Duration(milliseconds: 400),
+  }) {
     Future.delayed(duration, callback);
   }
 }
