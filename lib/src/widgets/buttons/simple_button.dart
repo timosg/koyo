@@ -54,6 +54,9 @@ class SimpleButton extends StatelessWidget {
             iconTheme: theme.iconTheme.copyWith(
               color: currentForegroundColor,
             ),
+            textTheme: theme.textTheme.apply(
+              bodyColor: currentForegroundColor,
+            ),
           ),
           child: child,
         ),
