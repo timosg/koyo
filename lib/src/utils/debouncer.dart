@@ -23,4 +23,8 @@ class Debouncer {
     _action = null;
     _timer = null;
   }
+
+  void dispose() {
+    _timer?.cancel();
+  }
 }
