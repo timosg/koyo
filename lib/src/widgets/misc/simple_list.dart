@@ -10,8 +10,16 @@ class SimpleList<T> extends StatelessWidget {
     this.scrollDirection = Axis.vertical,
     this.expand = false,
     this.shrinkWrap = true,
+    this.reverse = false,
+    this.controller,
+    this.primary,
+    this.physics,
   });
 
+  final bool reverse;
+  final ScrollController? controller;
+  final bool? primary;
+  final ScrollPhysics? physics;
   final List<T> items;
   final bool expand;
   final bool shrinkWrap;
@@ -24,6 +32,10 @@ class SimpleList<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     final isVertical = scrollDirection == Axis.vertical;
     final simpleList = ListView(
+      reverse: reverse,
+      controller: controller,
+      primary: primary,
+      physics: physics,
       scrollDirection: scrollDirection,
       shrinkWrap: shrinkWrap,
       children: <Widget>[
