@@ -14,6 +14,7 @@ class PlatformInfo {
     TargetPlatform.iOS,
   ];
 
+  bool get isWeb => kIsWeb;
   bool get isDesktop => _desktopPlatforms.contains(defaultTargetPlatform);
   bool get isMobile => _mobilePlatforms.contains(defaultTargetPlatform);
 
