@@ -23,5 +23,5 @@ final $random = Random(RND_SEED);
 final $orientation = Orientation();
 final $platform = PlatformInfo();
 
-// **Globals --> Styles
+// ** Globals --> Styles
 final $ui = Styles(); // - alias
