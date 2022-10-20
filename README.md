@@ -1,3 +1,3 @@
-# Wydget core library
+# Flutter Koyo utility tools
 
-//TODO: change name to Koyo
+Documentation coming soon!
