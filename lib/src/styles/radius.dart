@@ -2,38 +2,33 @@
 
 part of styles;
 
+abstract class Radius {
+  const Radius();
+  static const double xs = 2;
+  static const double sm = 4;
+  static const double md = 8;
+  static const double lg = 16;
+  static const double xl = 32;
+  static const double xxl = 64;
+}
+
 class _Radius {
-  final _value = const _RadiusValue();
+  late final double xs = Radius.xs;
+  late final double sm = Radius.sm;
+  late final double md = Radius.md;
+  late final double lg = Radius.lg;
+  late final double xl = Radius.xl;
+  late final double xxl = Radius.xxl;
 
-  late final double xs = _value.xs;
-  late final double sm = _value.sm;
-  late final double md = _value.md;
-  late final double lg = _value.lg;
-  late final double xl = _value.xl;
-  late final double xxl = _value.xxl;
-
-  late final circular = _RadiusCircular(_value);
+  late final circular = _RadiusCircular();
 }
 
 // ** Utility classes **
-
-class _RadiusValue {
-  const _RadiusValue();
-  final double xs = 2;
-  final double sm = 4;
-  final double md = 8;
-  final double lg = 16;
-  final double xl = 32;
-  final double xxl = 64;
-}
-
 class _RadiusCircular {
-  _RadiusCircular(this.value);
-  _RadiusValue value;
-  late final BorderRadius xs = BorderRadius.circular(value.xs);
-  late final BorderRadius sm = BorderRadius.circular(value.sm);
-  late final BorderRadius md = BorderRadius.circular(value.md);
-  late final BorderRadius lg = BorderRadius.circular(value.lg);
-  late final BorderRadius xl = BorderRadius.circular(value.xl);
-  late final BorderRadius xxl = BorderRadius.circular(value.xxl);
+  late final BorderRadius xs = BorderRadius.circular(Radius.xs);
+  late final BorderRadius sm = BorderRadius.circular(Radius.sm);
+  late final BorderRadius md = BorderRadius.circular(Radius.md);
+  late final BorderRadius lg = BorderRadius.circular(Radius.lg);
+  late final BorderRadius xl = BorderRadius.circular(Radius.xl);
+  late final BorderRadius xxl = BorderRadius.circular(Radius.xxl);
 }

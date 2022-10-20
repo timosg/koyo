@@ -16,25 +16,25 @@ class Space extends StatelessWidget {
 }
 
 class HSpace extends StatelessWidget {
-  const HSpace({super.key, this.h});
+  const HSpace({super.key, this.h = SpacingValue.xs});
 
   final double? h;
 
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_if_null_operators
-    return Space(h: h != null ? h : $ui.spacing.md);
+    return Space(h: h);
   }
 }
 
 class WSpace extends StatelessWidget {
-  const WSpace({super.key, this.w});
+  const WSpace({super.key, this.w = SpacingValue.xs});
 
   final double? w;
 
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_if_null_operators
-    return Space(w: w != null ? w : $ui.spacing.md);
+    return Space(w: w);
   }
 }
