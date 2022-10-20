@@ -24,5 +24,4 @@ final $orientation = Orientation();
 final $platform = PlatformInfo();
 
 // **Globals --> Styles
-final $styles = Styles(); // - alias
 final $ui = Styles(); // - alias

@@ -1,5 +1,6 @@
 library widgets;
 
+import 'dart:core';
 import 'dart:io' show Platform;
 import 'dart:ui';
 
