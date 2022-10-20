@@ -2,8 +2,7 @@
 
 part of styles;
 
-abstract class Spacing {
-  const Spacing();
+abstract class SpacingValue {
   static const double xs = 6;
   static const double sm = 12;
   static const double md = 16;
@@ -13,12 +12,12 @@ abstract class Spacing {
 }
 
 class _Spacing {
-  late final double xs = Spacing.xs;
-  late final double sm = Spacing.sm;
-  late final double md = Spacing.md;
-  late final double lg = Spacing.lg;
-  late final double xl = Spacing.xl;
-  late final double xxl = Spacing.xxl;
+  late final double xs = SpacingValue.xs;
+  late final double sm = SpacingValue.sm;
+  late final double md = SpacingValue.md;
+  late final double lg = SpacingValue.lg;
+  late final double xl = SpacingValue.xl;
+  late final double xxl = SpacingValue.xxl;
 
   late final all = _SpacingAll();
   late final left = _SpacingLeft();
@@ -36,125 +35,138 @@ class _Spacing {
 // ** utility classes **
 
 class _SpacingAll {
-  late final EdgeInsets xs = const EdgeInsets.all(Spacing.xs);
-  late final EdgeInsets sm = const EdgeInsets.all(Spacing.sm);
-  late final EdgeInsets md = const EdgeInsets.all(Spacing.md);
-  late final EdgeInsets lg = const EdgeInsets.all(Spacing.lg);
-  late final EdgeInsets xl = const EdgeInsets.all(Spacing.xl);
-  late final EdgeInsets xxl = const EdgeInsets.all(Spacing.xxl);
+  late final EdgeInsets xs = const EdgeInsets.all(SpacingValue.xs);
+  late final EdgeInsets sm = const EdgeInsets.all(SpacingValue.sm);
+  late final EdgeInsets md = const EdgeInsets.all(SpacingValue.md);
+  late final EdgeInsets lg = const EdgeInsets.all(SpacingValue.lg);
+  late final EdgeInsets xl = const EdgeInsets.all(SpacingValue.xl);
+  late final EdgeInsets xxl = const EdgeInsets.all(SpacingValue.xxl);
 }
 
 class _SpacingVertical {
-  late final EdgeInsets xs = const EdgeInsets.symmetric(vertical: Spacing.xs);
-  late final EdgeInsets sm = const EdgeInsets.symmetric(vertical: Spacing.sm);
-  late final EdgeInsets md = const EdgeInsets.symmetric(vertical: Spacing.md);
-  late final EdgeInsets lg = const EdgeInsets.symmetric(vertical: Spacing.lg);
-  late final EdgeInsets xl = const EdgeInsets.symmetric(vertical: Spacing.xl);
-  late final EdgeInsets xxl = const EdgeInsets.symmetric(vertical: Spacing.xxl);
+  late final EdgeInsets xs =
+      const EdgeInsets.symmetric(vertical: SpacingValue.xs);
+  late final EdgeInsets sm =
+      const EdgeInsets.symmetric(vertical: SpacingValue.sm);
+  late final EdgeInsets md =
+      const EdgeInsets.symmetric(vertical: SpacingValue.md);
+  late final EdgeInsets lg =
+      const EdgeInsets.symmetric(vertical: SpacingValue.lg);
+  late final EdgeInsets xl =
+      const EdgeInsets.symmetric(vertical: SpacingValue.xl);
+  late final EdgeInsets xxl =
+      const EdgeInsets.symmetric(vertical: SpacingValue.xxl);
 }
 
 class _SpacingVerticalAndRight {
   late final EdgeInsets xs = const EdgeInsets.only(
-      top: Spacing.xs, bottom: Spacing.xs, right: Spacing.xs);
+      top: SpacingValue.xs, bottom: SpacingValue.xs, right: SpacingValue.xs);
   late final EdgeInsets sm = const EdgeInsets.only(
-      top: Spacing.sm, bottom: Spacing.sm, right: Spacing.sm);
+      top: SpacingValue.sm, bottom: SpacingValue.sm, right: SpacingValue.sm);
   late final EdgeInsets md = const EdgeInsets.only(
-      top: Spacing.md, bottom: Spacing.md, right: Spacing.md);
+      top: SpacingValue.md, bottom: SpacingValue.md, right: SpacingValue.md);
   late final EdgeInsets lg = const EdgeInsets.only(
-      top: Spacing.lg, bottom: Spacing.lg, right: Spacing.lg);
+      top: SpacingValue.lg, bottom: SpacingValue.lg, right: SpacingValue.lg);
   late final EdgeInsets xl = const EdgeInsets.only(
-      top: Spacing.xl, bottom: Spacing.xl, right: Spacing.xl);
+      top: SpacingValue.xl, bottom: SpacingValue.xl, right: SpacingValue.xl);
   late final EdgeInsets xxl = const EdgeInsets.only(
-      top: Spacing.xxl, bottom: Spacing.xxl, right: Spacing.xxl);
+      top: SpacingValue.xxl, bottom: SpacingValue.xxl, right: SpacingValue.xxl);
 }
 
 class _SpacingVerticalAndLeft {
   late final EdgeInsets xs = const EdgeInsets.only(
-      top: Spacing.xs, bottom: Spacing.xs, left: Spacing.xs);
+      top: SpacingValue.xs, bottom: SpacingValue.xs, left: SpacingValue.xs);
   late final EdgeInsets sm = const EdgeInsets.only(
-      top: Spacing.sm, bottom: Spacing.sm, left: Spacing.sm);
+      top: SpacingValue.sm, bottom: SpacingValue.sm, left: SpacingValue.sm);
   late final EdgeInsets md = const EdgeInsets.only(
-      top: Spacing.md, bottom: Spacing.md, left: Spacing.md);
+      top: SpacingValue.md, bottom: SpacingValue.md, left: SpacingValue.md);
   late final EdgeInsets lg = const EdgeInsets.only(
-      top: Spacing.lg, bottom: Spacing.lg, left: Spacing.lg);
+      top: SpacingValue.lg, bottom: SpacingValue.lg, left: SpacingValue.lg);
   late final EdgeInsets xl = const EdgeInsets.only(
-      top: Spacing.xl, bottom: Spacing.xl, left: Spacing.xl);
+      top: SpacingValue.xl, bottom: SpacingValue.xl, left: SpacingValue.xl);
   late final EdgeInsets xxl = const EdgeInsets.only(
-      top: Spacing.xxl, bottom: Spacing.xxl, left: Spacing.xxl);
+      top: SpacingValue.xxl, bottom: SpacingValue.xxl, left: SpacingValue.xxl);
 }
 
 class _SpacingHorizontal {
-  late final EdgeInsets xs = const EdgeInsets.symmetric(horizontal: Spacing.xs);
-  late final EdgeInsets sm = const EdgeInsets.symmetric(horizontal: Spacing.sm);
-  late final EdgeInsets md = const EdgeInsets.symmetric(horizontal: Spacing.md);
-  late final EdgeInsets lg = const EdgeInsets.symmetric(horizontal: Spacing.lg);
-  late final EdgeInsets xl = const EdgeInsets.symmetric(horizontal: Spacing.xl);
+  late final EdgeInsets xs =
+      const EdgeInsets.symmetric(horizontal: SpacingValue.xs);
+  late final EdgeInsets sm =
+      const EdgeInsets.symmetric(horizontal: SpacingValue.sm);
+  late final EdgeInsets md =
+      const EdgeInsets.symmetric(horizontal: SpacingValue.md);
+  late final EdgeInsets lg =
+      const EdgeInsets.symmetric(horizontal: SpacingValue.lg);
+  late final EdgeInsets xl =
+      const EdgeInsets.symmetric(horizontal: SpacingValue.xl);
   late final EdgeInsets xxl =
-      const EdgeInsets.symmetric(horizontal: Spacing.xxl);
+      const EdgeInsets.symmetric(horizontal: SpacingValue.xxl);
 }
 
 class _SpacingHorizontalAndTop {
   late final EdgeInsets xs = const EdgeInsets.only(
-      left: Spacing.xs, right: Spacing.xs, top: Spacing.xs);
+      left: SpacingValue.xs, right: SpacingValue.xs, top: SpacingValue.xs);
   late final EdgeInsets sm = const EdgeInsets.only(
-      left: Spacing.sm, right: Spacing.sm, top: Spacing.sm);
+      left: SpacingValue.sm, right: SpacingValue.sm, top: SpacingValue.sm);
   late final EdgeInsets md = const EdgeInsets.only(
-      left: Spacing.md, right: Spacing.md, top: Spacing.md);
+      left: SpacingValue.md, right: SpacingValue.md, top: SpacingValue.md);
   late final EdgeInsets lg = const EdgeInsets.only(
-      left: Spacing.lg, right: Spacing.lg, top: Spacing.lg);
+      left: SpacingValue.lg, right: SpacingValue.lg, top: SpacingValue.lg);
   late final EdgeInsets xl = const EdgeInsets.only(
-      left: Spacing.xl, right: Spacing.xl, top: Spacing.xl);
+      left: SpacingValue.xl, right: SpacingValue.xl, top: SpacingValue.xl);
   late final EdgeInsets xxl = const EdgeInsets.only(
-      left: Spacing.xxl, right: Spacing.xxl, top: Spacing.xxl);
+      left: SpacingValue.xxl, right: SpacingValue.xxl, top: SpacingValue.xxl);
 }
 
 class _SpacingHorizontalAndBottom {
   late final EdgeInsets xs = const EdgeInsets.only(
-      left: Spacing.xs, right: Spacing.xs, bottom: Spacing.xs);
+      left: SpacingValue.xs, right: SpacingValue.xs, bottom: SpacingValue.xs);
   late final EdgeInsets sm = const EdgeInsets.only(
-      left: Spacing.sm, right: Spacing.sm, bottom: Spacing.sm);
+      left: SpacingValue.sm, right: SpacingValue.sm, bottom: SpacingValue.sm);
   late final EdgeInsets md = const EdgeInsets.only(
-      left: Spacing.md, right: Spacing.md, bottom: Spacing.md);
+      left: SpacingValue.md, right: SpacingValue.md, bottom: SpacingValue.md);
   late final EdgeInsets lg = const EdgeInsets.only(
-      left: Spacing.lg, right: Spacing.lg, bottom: Spacing.lg);
+      left: SpacingValue.lg, right: SpacingValue.lg, bottom: SpacingValue.lg);
   late final EdgeInsets xl = const EdgeInsets.only(
-      left: Spacing.xl, right: Spacing.xl, bottom: Spacing.xl);
+      left: SpacingValue.xl, right: SpacingValue.xl, bottom: SpacingValue.xl);
   late final EdgeInsets xxl = const EdgeInsets.only(
-      left: Spacing.xxl, right: Spacing.xxl, bottom: Spacing.xxl);
+      left: SpacingValue.xxl,
+      right: SpacingValue.xxl,
+      bottom: SpacingValue.xxl);
 }
 
 class _SpacingLeft {
-  late final EdgeInsets xs = const EdgeInsets.only(left: Spacing.xs);
-  late final EdgeInsets sm = const EdgeInsets.only(left: Spacing.sm);
-  late final EdgeInsets md = const EdgeInsets.only(left: Spacing.md);
-  late final EdgeInsets lg = const EdgeInsets.only(left: Spacing.lg);
-  late final EdgeInsets xl = const EdgeInsets.only(left: Spacing.xl);
-  late final EdgeInsets xxl = const EdgeInsets.only(left: Spacing.xxl);
+  late final EdgeInsets xs = const EdgeInsets.only(left: SpacingValue.xs);
+  late final EdgeInsets sm = const EdgeInsets.only(left: SpacingValue.sm);
+  late final EdgeInsets md = const EdgeInsets.only(left: SpacingValue.md);
+  late final EdgeInsets lg = const EdgeInsets.only(left: SpacingValue.lg);
+  late final EdgeInsets xl = const EdgeInsets.only(left: SpacingValue.xl);
+  late final EdgeInsets xxl = const EdgeInsets.only(left: SpacingValue.xxl);
 }
 
 class _SpacingRight {
-  late final EdgeInsets xs = const EdgeInsets.only(right: Spacing.xs);
-  late final EdgeInsets sm = const EdgeInsets.only(right: Spacing.sm);
-  late final EdgeInsets md = const EdgeInsets.only(right: Spacing.md);
-  late final EdgeInsets lg = const EdgeInsets.only(right: Spacing.lg);
-  late final EdgeInsets xl = const EdgeInsets.only(right: Spacing.xl);
-  late final EdgeInsets xxl = const EdgeInsets.only(right: Spacing.xxl);
+  late final EdgeInsets xs = const EdgeInsets.only(right: SpacingValue.xs);
+  late final EdgeInsets sm = const EdgeInsets.only(right: SpacingValue.sm);
+  late final EdgeInsets md = const EdgeInsets.only(right: SpacingValue.md);
+  late final EdgeInsets lg = const EdgeInsets.only(right: SpacingValue.lg);
+  late final EdgeInsets xl = const EdgeInsets.only(right: SpacingValue.xl);
+  late final EdgeInsets xxl = const EdgeInsets.only(right: SpacingValue.xxl);
 }
 
 class _SpacingTop {
-  late final EdgeInsets xs = const EdgeInsets.only(top: Spacing.xs);
-  late final EdgeInsets sm = const EdgeInsets.only(top: Spacing.sm);
-  late final EdgeInsets md = const EdgeInsets.only(top: Spacing.md);
-  late final EdgeInsets lg = const EdgeInsets.only(top: Spacing.lg);
-  late final EdgeInsets xl = const EdgeInsets.only(top: Spacing.xl);
-  late final EdgeInsets xxl = const EdgeInsets.only(top: Spacing.xxl);
+  late final EdgeInsets xs = const EdgeInsets.only(top: SpacingValue.xs);
+  late final EdgeInsets sm = const EdgeInsets.only(top: SpacingValue.sm);
+  late final EdgeInsets md = const EdgeInsets.only(top: SpacingValue.md);
+  late final EdgeInsets lg = const EdgeInsets.only(top: SpacingValue.lg);
+  late final EdgeInsets xl = const EdgeInsets.only(top: SpacingValue.xl);
+  late final EdgeInsets xxl = const EdgeInsets.only(top: SpacingValue.xxl);
 }
 
 class _SpacingBottom {
-  late final EdgeInsets xs = const EdgeInsets.only(bottom: Spacing.xs);
-  late final EdgeInsets sm = const EdgeInsets.only(bottom: Spacing.sm);
-  late final EdgeInsets md = const EdgeInsets.only(bottom: Spacing.md);
-  late final EdgeInsets lg = const EdgeInsets.only(bottom: Spacing.lg);
-  late final EdgeInsets xl = const EdgeInsets.only(bottom: Spacing.xl);
-  late final EdgeInsets xxl = const EdgeInsets.only(bottom: Spacing.xxl);
+  late final EdgeInsets xs = const EdgeInsets.only(bottom: SpacingValue.xs);
+  late final EdgeInsets sm = const EdgeInsets.only(bottom: SpacingValue.sm);
+  late final EdgeInsets md = const EdgeInsets.only(bottom: SpacingValue.md);
+  late final EdgeInsets lg = const EdgeInsets.only(bottom: SpacingValue.lg);
+  late final EdgeInsets xl = const EdgeInsets.only(bottom: SpacingValue.xl);
+  late final EdgeInsets xxl = const EdgeInsets.only(bottom: SpacingValue.xxl);
 }

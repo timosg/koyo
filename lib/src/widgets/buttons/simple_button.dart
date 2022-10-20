@@ -12,7 +12,7 @@ class SimpleButton extends StatelessWidget {
     this.disabledColor = CupertinoColors.quaternarySystemFill,
     this.minSize = kMinInteractiveDimensionCupertino,
     this.pressedOpacity = 0.4,
-    this.borderRadius = const BorderRadius.all(Radius.circular(8)),
+    this.borderRadius = const BorderRadius.all(Radius.circular(RadiusValue.md)),
     this.alignment = Alignment.center,
   });
 
