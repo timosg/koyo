@@ -23,7 +23,7 @@ class HSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_if_null_operators
-    return Space(h: h != null ? h : $styles.spacing.md);
+    return Space(h: h != null ? h : $ui.spacing.md);
   }
 }
 
@@ -35,6 +35,6 @@ class WSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_if_null_operators
-    return Space(w: w != null ? w : $styles.spacing.md);
+    return Space(w: w != null ? w : $ui.spacing.md);
   }
 }
