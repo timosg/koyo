@@ -1,12 +1,11 @@
 part of widgets;
 
-class SpacedRow extends StatelessWidget {
-  const SpacedRow({
+class $Row extends StatelessWidget {
+  const $Row({
     super.key,
     this.children = const <Widget>[],
     this.padding = EdgeInsets.zero,
     this.spacing,
-    this.expand,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -18,7 +17,6 @@ class SpacedRow extends StatelessWidget {
   final List<Widget> children;
   final EdgeInsets padding;
   final double? spacing;
-  final bool? expand;
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
   final CrossAxisAlignment crossAxisAlignment;
@@ -28,9 +26,7 @@ class SpacedRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
     return Container(
-      height: expand == true ? mediaQuery.size.height : null,
       padding: padding,
       child: Row(
         mainAxisAlignment: mainAxisAlignment,
@@ -41,7 +37,7 @@ class SpacedRow extends StatelessWidget {
         textBaseline: textBaseline,
         children: [
           for (int i = 0; i < children.length; i++) ...[
-            if (i != 0) WSpace(w: spacing),
+            if (i != 0) $WSpace(w: spacing),
             children[i],
           ],
         ],

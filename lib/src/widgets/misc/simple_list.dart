@@ -1,7 +1,7 @@
 part of widgets;
 
-class SimpleList<T> extends StatelessWidget {
-  const SimpleList({
+class $SimpleList<T> extends StatelessWidget {
+  const $SimpleList({
     super.key,
     required this.items,
     required this.builder,
@@ -40,7 +40,8 @@ class SimpleList<T> extends StatelessWidget {
       shrinkWrap: shrinkWrap,
       children: <Widget>[
         for (int index = 0; index < items.length; index++) ...[
-          if (index != 0) isVertical ? HSpace(h: spacing) : WSpace(w: spacing),
+          if (index != 0)
+            isVertical ? $HSpace(h: spacing) : $WSpace(w: spacing),
           builder(context, items[index], index),
         ]
       ],

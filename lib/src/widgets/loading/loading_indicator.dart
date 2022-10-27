@@ -1,7 +1,7 @@
 part of widgets;
 
-class LoadingIndicator extends StatelessWidget {
-  const LoadingIndicator({super.key, this.androidScale = 0.5});
+class $LoadingIndicator extends StatelessWidget {
+  const $LoadingIndicator({super.key, this.androidScale = 0.5});
 
   final double? androidScale;
 
