@@ -37,7 +37,7 @@ class KyRow extends StatelessWidget {
         textBaseline: textBaseline,
         children: [
           for (int i = 0; i < children.length; i++) ...[
-            if (i != 0) KyWSpace(w: spacing),
+            if (i != 0) KySpace(w: spacing),
             children[i],
           ],
         ],

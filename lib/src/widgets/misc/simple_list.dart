@@ -41,7 +41,7 @@ class KySimpleList<T> extends StatelessWidget {
       children: <Widget>[
         for (int index = 0; index < items.length; index++) ...[
           if (index != 0)
-            isVertical ? KyHSpace(h: spacing) : KyWSpace(w: spacing),
+            isVertical ? KySpace(h: spacing) : KySpace(w: spacing),
           builder(context, items[index], index),
         ]
       ],

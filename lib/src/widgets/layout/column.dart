@@ -37,7 +37,7 @@ class KyColumn extends StatelessWidget {
         textBaseline: textBaseline,
         children: [
           for (int i = 0; i < children.length; i++) ...[
-            if (i != 0) KyHSpace(h: spacing),
+            if (i != 0) KySpace(h: spacing),
             children[i],
           ],
         ],
