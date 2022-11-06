@@ -1,7 +1,7 @@
 part of widgets;
 
-class $Space extends StatelessWidget {
-  const $Space({super.key, this.h, this.w});
+class KySpace extends StatelessWidget {
+  const KySpace({super.key, this.h, this.w});
 
   final double? h;
   final double? w;
@@ -15,24 +15,24 @@ class $Space extends StatelessWidget {
   }
 }
 
-class $HSpace extends StatelessWidget {
-  const $HSpace({super.key, this.h = SpacingValue.xs});
+class KyHSpace extends StatelessWidget {
+  const KyHSpace({super.key, this.h = SpacingValue.xs});
 
   final double? h;
 
   @override
   Widget build(BuildContext context) {
-    return $Space(h: h);
+    return KySpace(h: h);
   }
 }
 
-class $WSpace extends StatelessWidget {
-  const $WSpace({super.key, this.w = SpacingValue.xs});
+class KyWSpace extends StatelessWidget {
+  const KyWSpace({super.key, this.w = SpacingValue.xs});
 
   final double? w;
 
   @override
   Widget build(BuildContext context) {
-    return $Space(w: w);
+    return KySpace(w: w);
   }
 }

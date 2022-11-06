@@ -1,7 +1,7 @@
 part of widgets;
 
-class $Row extends StatelessWidget {
-  const $Row({
+class KyRow extends StatelessWidget {
+  const KyRow({
     super.key,
     this.children = const <Widget>[],
     this.padding = EdgeInsets.zero,
@@ -37,7 +37,7 @@ class $Row extends StatelessWidget {
         textBaseline: textBaseline,
         children: [
           for (int i = 0; i < children.length; i++) ...[
-            if (i != 0) $WSpace(w: spacing),
+            if (i != 0) KyWSpace(w: spacing),
             children[i],
           ],
         ],

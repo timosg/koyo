@@ -1,7 +1,7 @@
 part of widgets;
 
-class $SimpleList<T> extends StatelessWidget {
-  const $SimpleList({
+class KySimpleList<T> extends StatelessWidget {
+  const KySimpleList({
     super.key,
     required this.items,
     required this.builder,
@@ -41,7 +41,7 @@ class $SimpleList<T> extends StatelessWidget {
       children: <Widget>[
         for (int index = 0; index < items.length; index++) ...[
           if (index != 0)
-            isVertical ? $HSpace(h: spacing) : $WSpace(w: spacing),
+            isVertical ? KyHSpace(h: spacing) : KyWSpace(w: spacing),
           builder(context, items[index], index),
         ]
       ],

@@ -1,7 +1,7 @@
 part of widgets;
 
-class $Column extends StatelessWidget {
-  const $Column({
+class KyColumn extends StatelessWidget {
+  const KyColumn({
     super.key,
     this.children = const <Widget>[],
     this.padding = EdgeInsets.zero,
@@ -37,7 +37,7 @@ class $Column extends StatelessWidget {
         textBaseline: textBaseline,
         children: [
           for (int i = 0; i < children.length; i++) ...[
-            if (i != 0) $HSpace(h: spacing),
+            if (i != 0) KyHSpace(h: spacing),
             children[i],
           ],
         ],

@@ -1,7 +1,7 @@
 part of widgets;
 
-class $LoadingOverlay extends StatelessWidget {
-  const $LoadingOverlay({
+class KyLoadingOverlay extends StatelessWidget {
+  const KyLoadingOverlay({
     super.key,
     required this.visible,
     required this.child,
@@ -41,7 +41,7 @@ class $LoadingOverlay extends StatelessWidget {
                         height: mediaQuery.size.height,
                         width: mediaQuery.size.width,
                         color: backgroundColor.withOpacity(overlayOpacity),
-                        child: const Center(child: $LoadingIndicator()),
+                        child: const Center(child: KyLoadingIndicator()),
                       ),
                     )
                   : const Empty(),
