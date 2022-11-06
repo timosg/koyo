@@ -44,7 +44,7 @@ class KyLoadingOverlay extends StatelessWidget {
                         child: const Center(child: KyLoadingIndicator()),
                       ),
                     )
-                  : const Empty(),
+                  : const KyEmpty(),
             ),
           ),
         ],

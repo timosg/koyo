@@ -1,7 +1,7 @@
 part of widgets;
 
-class Empty extends StatelessWidget {
-  const Empty({super.key});
+class KyEmpty extends StatelessWidget {
+  const KyEmpty({super.key});
 
   @override
   Widget build(BuildContext context) => const SizedBox.shrink();

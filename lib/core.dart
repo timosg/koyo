@@ -20,7 +20,7 @@ late BuildContext $unsafe_context;
 // ** Globals --> Utility
 final $animations = Animations();
 final $random = Random(RND_SEED);
-final $orientation = Orientation();
+final $orientation = KyOrientation();
 final $platform = PlatformInfo();
 
 // ** Globals --> Styles
