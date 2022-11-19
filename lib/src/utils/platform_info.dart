@@ -1,3 +1,4 @@
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
@@ -24,6 +25,50 @@ class PlatformInfo {
   bool get isFuchsia => defaultTargetPlatform == TargetPlatform.fuchsia;
   bool get isAndroid => defaultTargetPlatform == TargetPlatform.android;
   bool get isIOS => defaultTargetPlatform == TargetPlatform.iOS;
+
+  Future<String?> get getDeviceId async {
+    final deviceInfo = DeviceInfoPlugin();
+    if (isIOS) {
+      final iosDeviceInfo = await deviceInfo.iosInfo;
+      return iosDeviceInfo.identifierForVendor;
+    } else if (isAndroid) {
+      final androidDeviceInfo = await deviceInfo.androidInfo;
+      return androidDeviceInfo.id;
+    }
+    return null;
+  }
+
+  Future<String?> get getDeviceModel async {
+    final platformInfo = PlatformInfo();
+    final deviceInfo = DeviceInfoPlugin();
+
+    if (isAndroid) {
+      final info = await deviceInfo.androidInfo;
+      return info.model;
+    }
+    if (isIOS) {
+      final info = await deviceInfo.iosInfo;
+      return info.utsname.machine;
+    }
+    if (isWindows) {
+      final info = await deviceInfo.iosInfo;
+      return info.utsname.machine;
+    }
+    if (isWeb) {
+      final info = await deviceInfo.webBrowserInfo;
+      return info.userAgent;
+    }
+    if (platformInfo.isMacOS) {
+      final info = await deviceInfo.macOsInfo;
+      return info.osRelease;
+    }
+    if (platformInfo.isLinux) {
+      final info = await deviceInfo.linuxInfo;
+      return info.prettyName;
+    }
+
+    return null;
+  }
 
   Future<bool> get isConnected async =>
       InternetConnectionCheckerPlus().hasConnection;
