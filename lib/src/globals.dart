@@ -5,7 +5,6 @@ library core;
 import 'dart:math';
 
 import 'package:flutter/material.dart' show BuildContext;
-import 'package:koyo/src/animations/animations.dart';
 import 'package:koyo/src/styles/styles.dart';
 import 'package:koyo/src/utils/utils.dart';
 
@@ -17,7 +16,7 @@ export 'utils/utils.dart';
 late BuildContext $unsafe_context;
 
 // ** Globals --> Utility
-final $animations = Animations();
+final $duration = KyDuration();
 final $random = Random(DateTime.now().millisecondsSinceEpoch);
 final $orientation = KyOrientation();
 final $platform = PlatformInfo();
