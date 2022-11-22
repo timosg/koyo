@@ -6,20 +6,19 @@ import 'dart:math';
 
 import 'package:flutter/material.dart' show BuildContext;
 import 'package:koyo/src/animations/animations.dart';
-import 'package:koyo/src/constants.dart';
 import 'package:koyo/src/styles/styles.dart';
 import 'package:koyo/src/utils/utils.dart';
 
-export 'src/extensions/extensions.dart';
-export 'src/types.dart';
-export 'src/utils/utils.dart';
+export 'extensions/extensions.dart';
+export 'types.dart';
+export 'utils/utils.dart';
 
 // ** Unsafe --> only use internally
 late BuildContext $unsafe_context;
 
 // ** Globals --> Utility
 final $animations = Animations();
-final $random = Random(RND_SEED);
+final $random = Random(DateTime.now().millisecondsSinceEpoch);
 final $orientation = KyOrientation();
 final $platform = PlatformInfo();
 
