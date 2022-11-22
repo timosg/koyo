@@ -41,7 +41,7 @@ class KyLoadingOverlay extends StatelessWidget {
                         height: mediaQuery.size.height,
                         width: mediaQuery.size.width,
                         color: backgroundColor.withOpacity(overlayOpacity),
-                        child: const Center(child: KyLoadingIndicator()),
+                        child: const Center(child: KyLoader()),
                       ),
                     )
                   : const KyEmpty(),

@@ -1,7 +1,7 @@
 part of widgets;
 
-class KyLoadingIndicator extends StatelessWidget {
-  const KyLoadingIndicator({super.key, this.androidScale = 0.5});
+class KyLoader extends StatelessWidget {
+  const KyLoader({super.key, this.androidScale = 0.5});
 
   final double? androidScale;
 

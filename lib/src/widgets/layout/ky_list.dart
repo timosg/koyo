@@ -1,7 +1,7 @@
 part of widgets;
 
-class KySimpleList<T> extends StatelessWidget {
-  const KySimpleList({
+class KyList<T> extends StatelessWidget {
+  const KyList({
     super.key,
     required this.items,
     required this.builder,
