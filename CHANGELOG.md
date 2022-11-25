@@ -1,3 +1,7 @@
+## 0.2.4
+
+- Fixed unsafe context
+
 ## 0.2.3
 
 - Changed delay to delayer

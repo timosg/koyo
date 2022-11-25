@@ -26,7 +26,7 @@ part 'utils/ky_platform_info.dart';
 final Ky = _Ky();
 
 class _Ky {
-  late final BuildContext unsafeContext;
+  late BuildContext unsafeContext;
   // ** Standalones
   _KyDebouncer get debouncer => _KyDebouncer();
   // ** Utils
