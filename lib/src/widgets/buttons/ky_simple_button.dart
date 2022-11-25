@@ -12,7 +12,7 @@ class KySimpleButton extends StatelessWidget {
     this.disabledColor = CupertinoColors.quaternarySystemFill,
     this.minSize = kMinInteractiveDimensionCupertino,
     this.pressedOpacity = 0.4,
-    this.borderRadius = const BorderRadius.all(Radius.circular(RadiusValue.md)),
+    this.borderRadius,
     this.alignment = Alignment.center,
   });
 
@@ -46,7 +46,7 @@ class KySimpleButton extends StatelessWidget {
         disabledColor: disabledColor,
         minSize: minSize,
         pressedOpacity: pressedOpacity,
-        borderRadius: borderRadius,
+        borderRadius: borderRadius ?? Ky.radius.circular.md,
         alignment: alignment,
         onPressed: onPressed,
         child: Theme(

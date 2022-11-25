@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension BrightnessExtension on Brightness {
+extension KyBrightnessExtension on Brightness {
   /// Check if this is equal to [Brightness.dark]
   bool get isDark => this == Brightness.dark;
 

@@ -1,4 +1,4 @@
-extension DateTimeExtension on DateTime {
+extension KyDateTimeExtension on DateTime {
   DateTime copyWith({
     int? year,
     int? month,

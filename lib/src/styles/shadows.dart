@@ -25,7 +25,7 @@
 
 part of styles;
 
-class _Shadows {
+class _KyShadows {
   final _luminanceTreshold = 0.179;
 
   // xs: '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)',

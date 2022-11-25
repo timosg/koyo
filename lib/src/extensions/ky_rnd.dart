@@ -1,6 +1,6 @@
 import 'dart:math';
 
-extension RandomExtension on Random {
+extension KyRandomExtension on Random {
   int getInt(int min, int max) {
     return min + nextInt(max - min);
   }

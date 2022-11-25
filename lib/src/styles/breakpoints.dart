@@ -2,7 +2,7 @@
 
 part of styles;
 
-class _Breakpoints {
+class _KyBreakpoints {
   final double xs = 576;
   final double sm = 768;
   final double md = 992;

@@ -12,7 +12,7 @@ class Koyo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    $unsafe_context = context;
+    Ky.unsafeContext = context;
     return MediaQuery(
       data: MediaQuery.of(context).copyWith(textScaleFactor: textScaleFactor),
       child: child,

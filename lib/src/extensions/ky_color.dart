@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension ColorExtension on Color {
+extension KyColorExtension on Color {
   static const _luminanceTreshold = 0.179;
   static const _hexCode = 16;
 

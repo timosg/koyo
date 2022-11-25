@@ -6,8 +6,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:koyo/src/globals.dart';
-import 'package:koyo/src/styles/styles.dart';
+import 'package:koyo/koyo.dart';
 
 part 'widgets/koyo.dart';
 part 'widgets/buttons/ky_simple_button.dart';
