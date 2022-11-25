@@ -1,8 +1,6 @@
 part of core;
 
-class Delayer {
-  const Delayer();
-
+class _KyDelayer {
   void postFrame(void Function() callback) {
     SchedulerBinding.instance.addPostFrameCallback((Duration _) => callback());
   }

@@ -27,11 +27,14 @@ final Ky = _Ky();
 
 class _Ky {
   late final BuildContext unsafeContext;
+  // ** Standalones
+  _KyDebouncer get debouncer => _KyDebouncer();
   // ** Utils
   final orientation = _KyOrientation();
   final platform = _KyPlatformInfo();
   final rnd = Random(DateTime.now().millisecondsSinceEpoch);
   final duration = _KyDuration();
+  final delay = _KyDelayer();
   // ** Styles
   final spacing = _KySpacing();
   final radius = _KyRadius();

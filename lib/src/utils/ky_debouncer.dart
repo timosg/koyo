@@ -1,8 +1,6 @@
 part of core;
 
-class Debouncer {
-  Debouncer();
-
+class _KyDebouncer {
   Duration _duration = const Duration(milliseconds: 400);
   VoidCallback? _callback;
   Timer? _timer;
