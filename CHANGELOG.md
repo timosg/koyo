@@ -1,3 +1,7 @@
+## 0.2.1
+
+- Fixed changelog
+
 ## 0.2.0
 
 - Change all namespaces
