@@ -1,3 +1,5 @@
+part of core;
+
 class _Defaults {
   final int verySlow = 2000;
   final int slow = 1000;
@@ -6,7 +8,7 @@ class _Defaults {
   final int veryFast = 200;
 }
 
-class KyDuration {
+class _KyDuration {
   final defaults = _Defaults();
   Duration Function(int) duration = (int ms) => Duration(milliseconds: ms);
 

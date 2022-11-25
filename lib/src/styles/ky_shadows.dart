@@ -23,7 +23,7 @@
 // 4% — 0A
 // 0% — 00
 
-part of styles;
+part of core;
 
 class _KyShadows {
   final _luminanceTreshold = 0.179;

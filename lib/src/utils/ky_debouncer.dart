@@ -1,5 +1,4 @@
-import 'dart:async';
-import 'dart:ui';
+part of core;
 
 class Debouncer {
   Debouncer();

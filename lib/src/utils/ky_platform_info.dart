@@ -1,8 +1,6 @@
-import 'package:device_info_plus/device_info_plus.dart';
-import 'package:flutter/foundation.dart';
-import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
+part of core;
 
-class KyPlatformInfo {
+class _KyPlatformInfo {
   final _desktopPlatforms = [
     TargetPlatform.fuchsia,
     TargetPlatform.macOS,
@@ -39,7 +37,7 @@ class KyPlatformInfo {
   }
 
   Future<String?> get getDeviceModel async {
-    final platformInfo = KyPlatformInfo();
+    final platformInfo = _KyPlatformInfo();
     final deviceInfo = DeviceInfoPlugin();
 
     if (isAndroid) {

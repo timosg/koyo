@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+part of core;
 
-class KyOrientation {
+class _KyOrientation {
   final portrait = _Portrait();
   final landscape = _Landscape();
   final orientation = Orientation;
