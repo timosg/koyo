@@ -34,7 +34,7 @@ class _Ky {
   final platform = _KyPlatformInfo();
   final rnd = Random(DateTime.now().millisecondsSinceEpoch);
   final duration = _KyDuration();
-  final delay = _KyDelayer();
+  final delayer = _KyDelayer();
   // ** Styles
   final spacing = _KySpacing();
   final radius = _KyRadius();

@@ -1,3 +1,7 @@
+## 0.2.3
+
+- Changed delay to delayer
+
 ## 0.2.2
 
 - Updated naming
