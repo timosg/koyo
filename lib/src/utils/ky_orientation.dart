@@ -3,6 +3,11 @@ part of core;
 class _KyOrientation {
   final portrait = _Portrait();
   final landscape = _Landscape();
+  void get all {
+    portrait.all();
+    landscape.all();
+  }
+
   final orientation = Orientation;
 }
 

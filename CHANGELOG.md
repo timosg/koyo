@@ -1,3 +1,8 @@
+## 0.2.2
+
+- Updated naming
+- Added all to orientation for landscape and portrait combined
+
 ## 0.2.1
 
 - Fixed changelog

@@ -5,7 +5,7 @@ class _KyDelayer {
     SchedulerBinding.instance.addPostFrameCallback((Duration _) => callback());
   }
 
-  void delay(
+  void postDuration(
     void Function() callback, {
     Duration duration = const Duration(milliseconds: 400),
   }) {
