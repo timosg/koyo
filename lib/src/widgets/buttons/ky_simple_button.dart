@@ -1,7 +1,7 @@
 part of widgets;
 
-class KySimpleButton extends StatelessWidget {
-  const KySimpleButton({
+class KyButton extends StatelessWidget {
+  const KyButton.simple({
     super.key,
     required this.child,
     required this.onPressed,
