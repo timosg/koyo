@@ -1,4 +1,5 @@
 extension KyDateTimeExtension on DateTime {
+  /// Enables the [copyWith] function for date time object to enable smart copy
   DateTime copyWith({
     int? year,
     int? month,
