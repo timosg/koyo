@@ -5,5 +5,5 @@ extension KyBrightnessExtension on Brightness {
   bool get isDark => this == Brightness.dark;
 
   /// Check if this is equal to [Brightness.light]
-  bool get isLight => this == Brightness.dark;
+  bool get isLight => this == Brightness.light;
 }
