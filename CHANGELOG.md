@@ -1,3 +1,8 @@
+## 0.2.5
+
+- Updated code documentation
+- Fixed Brightness extension
+
 ## 0.2.4
 
 - Fixed unsafe context
