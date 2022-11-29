@@ -24,7 +24,7 @@ class _KyPlatformInfo {
   bool get isAndroid => defaultTargetPlatform == TargetPlatform.android;
   bool get isIOS => defaultTargetPlatform == TargetPlatform.iOS;
 
-  Future<String?> get getDeviceId async {
+  Future<String?> get deviceId async {
     final deviceInfo = DeviceInfoPlugin();
     if (isIOS) {
       final iosDeviceInfo = await deviceInfo.iosInfo;
@@ -36,36 +36,32 @@ class _KyPlatformInfo {
     return null;
   }
 
-  Future<String?> get getDeviceModel async {
+  Future<String> get deviceModel async {
     final platformInfo = _KyPlatformInfo();
     final deviceInfo = DeviceInfoPlugin();
+    String? deviceModel;
 
     if (isAndroid) {
       final info = await deviceInfo.androidInfo;
-      return info.model;
-    }
-    if (isIOS) {
+      deviceModel = info.model;
+    } else if (isIOS) {
       final info = await deviceInfo.iosInfo;
-      return info.utsname.machine;
-    }
-    if (isWindows) {
+      deviceModel = info.utsname.machine;
+    } else if (isWindows) {
       final info = await deviceInfo.iosInfo;
-      return info.utsname.machine;
-    }
-    if (isWeb) {
+      deviceModel = info.utsname.machine;
+    } else if (isWeb) {
       final info = await deviceInfo.webBrowserInfo;
-      return info.userAgent;
-    }
-    if (platformInfo.isMacOS) {
+      deviceModel = info.userAgent;
+    } else if (platformInfo.isMacOS) {
       final info = await deviceInfo.macOsInfo;
-      return info.osRelease;
-    }
-    if (platformInfo.isLinux) {
+      deviceModel = info.osRelease;
+    } else if (platformInfo.isLinux) {
       final info = await deviceInfo.linuxInfo;
-      return info.prettyName;
+      deviceModel = info.prettyName;
     }
 
-    return null;
+    return deviceModel ?? 'unknown';
   }
 
   Future<bool> get isConnected async =>

@@ -1,3 +1,9 @@
+## 0.2.6
+
+- Changed naming for 'getDeviceId' -> 'deviceId'
+- Changed naming for 'getDeviceModel' -> 'deviceModel'
+- Added 'unknown' for deviceModel
+
 ## 0.2.5
 
 - Updated code documentation
