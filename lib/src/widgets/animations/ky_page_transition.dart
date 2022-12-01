@@ -1,16 +1,5 @@
 part of widgets;
 
-enum KyTransition {
-  /// [SlideTransition]
-  rightToLeft,
-  leftToRight,
-  topToBottom,
-  bottomToTop,
-
-  /// [FadeTransition]
-  fade
-}
-
 final Animatable<Offset> _leftToRightTween = Tween<Offset>(
   begin: const Offset(-1, 0),
   end: Offset.zero,

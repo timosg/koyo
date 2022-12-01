@@ -1,3 +1,8 @@
+## 0.2.8
+
+- Added 'enums' directory
+- Updated 'KyPageExtra' model
+
 ## 0.2.7
 
 - Added 'models' directory
