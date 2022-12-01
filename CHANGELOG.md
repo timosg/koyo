@@ -1,3 +1,9 @@
+## 0.2.7
+
+- Added 'models' directory
+- Added 'KyPageExtra' model
+- Added Page transitioning
+
 ## 0.2.6
 
 - Changed naming for 'getDeviceId' -> 'deviceId'
