@@ -1,3 +1,7 @@
+## 0.2.9
+
+- Fixed exports
+
 ## 0.2.8
 
 - Added 'enums' directory
