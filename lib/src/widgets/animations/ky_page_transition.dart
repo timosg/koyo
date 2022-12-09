@@ -11,7 +11,7 @@ final Animatable<Offset> _rightToLeftTween = Tween<Offset>(
 );
 
 final Animatable<Offset> _topToBottomTween = Tween<Offset>(
-  begin: const Offset(0, 1),
+  begin: const Offset(0, -1),
   end: Offset.zero,
 );
 
@@ -73,7 +73,7 @@ class KySlideAnimation extends StatelessWidget {
 
     primaryShadowAnimation = CurvedAnimation(
       parent: animation,
-      curve: Curves.linearToEaseOut,
+      curve: Curves.linear,
     ).drive(
       DecorationTween(
         begin: BoxDecoration(

@@ -1,3 +1,8 @@
+## 0.2.10
+
+- Fixed topToBottom
+- Updated transition shadows
+
 ## 0.2.9
 
 - Fixed exports
