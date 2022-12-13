@@ -5,7 +5,7 @@ This library is mainly used by hobby projects and apps by [Wydget](https://wydge
 The focus is on the following points:
 
 - ⚡ Fast development
-- 🔥 Good & structured UX
+- 🔥 Good & structured dx
 - ⌛ Time saving utils & widgets
 
 > **_NOTE:_** This library is in a pre alpha state and the documentation is not complete yet!
