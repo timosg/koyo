@@ -1,6 +1,4 @@
-import 'package:flutter/widgets.dart';
-import 'package:koyo/src/enums.dart';
-import 'package:koyo/src/pages.dart';
+part of pages;
 
 KySlideAnimation Function({
   required Animation<double> animation,
