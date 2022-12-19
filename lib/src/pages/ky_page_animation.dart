@@ -7,7 +7,7 @@ Widget Function(
   Widget child,
 ) createKyPageAnimation({
   KyTransition? transition,
-  KyTransition? defaultTransition,
+  KyTransition defaultTransition = KyTransition.rightToLeft,
 }) {
   Widget curry(
     BuildContext context,
@@ -16,7 +16,7 @@ Widget Function(
     Widget child,
   ) {
     return KySlideAnimation(
-      transition: transition ?? defaultTransition ?? KyTransition.rightToLeft,
+      transition: transition ?? defaultTransition,
       animation: animation,
       secondaryAnimation: secondaryAnimation,
       child: child,
