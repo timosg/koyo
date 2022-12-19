@@ -51,8 +51,14 @@ class KySlideAnimation extends StatelessWidget {
       curve: Curves.linear,
     ).drive(
       DecorationTween(
-        begin: BoxDecoration(border: Border.all()),
-        end: BoxDecoration(border: Border.all()),
+        begin: BoxDecoration(
+            border: Border.all(
+          width: 12,
+        )),
+        end: BoxDecoration(
+            border: Border.all(
+          width: 12,
+        )),
       ),
     );
 
