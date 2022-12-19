@@ -38,8 +38,21 @@ class KySlideAnimation extends StatelessWidget {
   final Animation<double> secondaryAnimation;
   final KyTransition transition;
 
+  // ignore: sort_constructors_first
+  const KySlideAnimation.create({
+    super.key,
+    required this.child,
+    required this.animation,
+    required this.secondaryAnimation,
+    required this.transition,
+  });
+
   @override
   Widget build(BuildContext context) {
+    return createKyPageTransition();
+  }
+
+  Widget createKyPageTransition() {
     /// [KyPageTransition.fade]
     if (transition == KyTransition.fade) {
       return FadeTransition(opacity: animation, child: child);
@@ -82,7 +95,7 @@ class KySlideAnimation extends StatelessWidget {
         ),
         end: BoxDecoration(
           color: Colors.black,
-          boxShadow: Ky.shadows.xxl,
+          boxShadow: Ky.shadows.xl,
         ),
       ),
     );

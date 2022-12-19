@@ -94,6 +94,46 @@ KyLoadingOverlay(...)
 KyEmpty()
 ```
 
+## Integration with third party libraries
+
+### go_router
+
+Koyo provides a few utility helpers to quickly introduce new features to the go_router package.
+
+Utilize `KyPageExtra` to pass informations to the router
+
+```dart
+context.go(
+    '...',
+    extra: KyPageExtra(
+        data: data, // Provide data or leave it empty
+        transition: KyTransition.fade // Select a transition for this page navigation or leave it empty
+    ),
+);
+```
+
+And configure it inside your `routes.dart`
+
+```dart
+GoRoute(
+    path: '...',
+    pageBuilder: (context, state) {
+        final extra = KyPageExtra.fromExtra(state.extra); // Extract [KyPageExtra] from [state.extra]
+        return CustomTransitionPage<void>(
+            key: state.pageKey,
+            child: const Screen(),
+            transitionsBuilder: (_, animatiosecondaryAnimation, child) =>
+                    KySlideAnimation(
+            transition: extra.transition ?? KyTransition.leftToRight, // Provide a default transition
+            animation: animation,
+            secondaryAnimation: secondaryAnimation,
+            child: child,
+            ),
+        );
+    },
+),
+```
+
 ## Used libraries
 
 Following libraries are used inside the Koyo project:

@@ -1,3 +1,8 @@
+## 0.2.11
+
+- Reduced shadow on transition
+- Updated docs
+
 ## 0.2.10
 
 - Fixed topToBottom
