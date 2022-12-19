@@ -26,6 +26,16 @@ class KySlideAnimation extends StatelessWidget {
     final Animation<Offset> secondaryPositionAnimation;
     final Animation<Decoration> primaryShadowAnimation;
 
+    if (transition == KyTransition.leftToRight ||
+        transition == KyTransition.rightToLeft) {
+      return CupertinoPageTransition(
+        primaryRouteAnimation: animation,
+        secondaryRouteAnimation: secondaryAnimation,
+        linearTransition: false,
+        child: child,
+      );
+    }
+
     primaryPositionAnimation = CurvedAnimation(
       parent: animation,
       curve: Curves.linearToEaseOut,
@@ -33,40 +43,14 @@ class KySlideAnimation extends StatelessWidget {
     ).drive(
       transition == KyTransition.topToBottom
           ? _topToBottomTween
-          : transition == KyTransition.bottomToTop
-              ? _bottomToTopTween
-              : transition == KyTransition.rightToLeft
-                  ? _rightToLeftTween
-                  : _leftToRightTween,
+          : _bottomToTopTween,
     );
 
     secondaryPositionAnimation = CurvedAnimation(
       parent: secondaryAnimation,
       curve: Curves.linearToEaseOut,
       reverseCurve: Curves.easeInToLinear,
-    ).drive(
-      transition == KyTransition.topToBottom
-          ? _bottomToTopTween
-          : transition == KyTransition.bottomToTop
-              ? _topToBottomTween
-              : transition == KyTransition.rightToLeft
-                  ? _leftToRightTween
-                  : _rightToLeftTween,
-    );
-
-    return CupertinoPageTransition(
-      primaryRouteAnimation: animation,
-      secondaryRouteAnimation: secondaryAnimation,
-      child: child,
-      linearTransition: true,
-    );
-
-    // return CupertinoPageTransitionsBuilder(
-    //   primaryPositionAnimation: primaryPositionAnimation,
-    //   secondaryPositionAnimation: secondaryPositionAnimation,
-    //   primaryShadowAnimation: primaryShadowAnimation,
-    //   child: child,
-    // );
+    ).drive(_zeroTween);
 
     primaryShadowAnimation = CurvedAnimation(
       parent: animation,
