@@ -1,6 +1,7 @@
 part of pages;
 
-KySlideAnimation Function({
+Widget Function({
+  required BuildContext context,
   required Animation<double> animation,
   required Animation<double> secondaryAnimation,
   required Widget child,
