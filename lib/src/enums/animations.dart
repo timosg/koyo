@@ -8,5 +8,8 @@ enum KyTransition {
   bottomToTop,
 
   /// [FadeTransition]
-  fade
+  fade,
+
+  /// [CupertinoPageTransition]
+  ios
 }

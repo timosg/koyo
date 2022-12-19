@@ -7,7 +7,7 @@ Widget Function(
   Widget child,
 ) createKyPageTransition({
   KyTransition? transition,
-  KyTransition defaultTransition = KyTransition.rightToLeft,
+  KyTransition defaultTransition = KyTransition.ios,
 }) {
   Widget curry(
     BuildContext context,

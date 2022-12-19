@@ -26,8 +26,7 @@ class KySlideAnimation extends StatelessWidget {
     final Animation<Offset> secondaryPositionAnimation;
     final Animation<Decoration> primaryShadowAnimation;
 
-    if (transition == KyTransition.leftToRight ||
-        transition == KyTransition.rightToLeft) {
+    if (transition == KyTransition.ios) {
       return CupertinoPageTransition(
         primaryRouteAnimation: animation,
         secondaryRouteAnimation: secondaryAnimation,
@@ -43,7 +42,11 @@ class KySlideAnimation extends StatelessWidget {
     ).drive(
       transition == KyTransition.topToBottom
           ? _topToBottomTween
-          : _bottomToTopTween,
+          : transition == KyTransition.bottomToTop
+              ? _bottomToTopTween
+              : transition == KyTransition.rightToLeft
+                  ? _rightToLeftTween
+                  : _leftToRightTween,
     );
 
     secondaryPositionAnimation = CurvedAnimation(
