@@ -44,7 +44,15 @@ class KySlideAnimation extends StatelessWidget {
       parent: secondaryAnimation,
       curve: Curves.linearToEaseOut,
       reverseCurve: Curves.easeInToLinear,
-    ).drive(_zeroTween);
+    ).drive(
+      transition == KyTransition.topToBottom
+          ? _topToBottomTween
+          : transition == KyTransition.bottomToTop
+              ? _bottomToTopTween
+              : transition == KyTransition.rightToLeft
+                  ? _rightToLeftTween
+                  : _leftToRightTween,
+    );
 
     primaryShadowAnimation = CurvedAnimation(
       parent: animation,
@@ -52,13 +60,13 @@ class KySlideAnimation extends StatelessWidget {
     ).drive(
       DecorationTween(
         begin: BoxDecoration(
-            border: Border.all(
-          width: 12,
-        )),
+          color: Colors.black,
+          boxShadow: Ky.shadows.xs,
+        ),
         end: BoxDecoration(
-            border: Border.all(
-          width: 12,
-        )),
+          color: Colors.black,
+          boxShadow: Ky.shadows.xxl,
+        ),
       ),
     );
 
