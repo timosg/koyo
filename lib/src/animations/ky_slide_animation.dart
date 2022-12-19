@@ -46,12 +46,12 @@ class KySlideAnimation extends StatelessWidget {
       reverseCurve: Curves.easeInToLinear,
     ).drive(
       transition == KyTransition.topToBottom
-          ? _topToBottomTween
+          ? _bottomToTopTween
           : transition == KyTransition.bottomToTop
-              ? _bottomToTopTween
+              ? _topToBottomTween
               : transition == KyTransition.rightToLeft
-                  ? _rightToLeftTween
-                  : _leftToRightTween,
+                  ? _leftToRightTween
+                  : _rightToLeftTween,
     );
 
     primaryShadowAnimation = CurvedAnimation(
