@@ -11,5 +11,8 @@ enum KyTransition {
   fade,
 
   /// [CupertinoPageTransition]
-  ios
+  cupertino,
+
+  /// [none]
+  none,
 }

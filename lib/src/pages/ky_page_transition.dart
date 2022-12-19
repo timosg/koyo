@@ -6,8 +6,7 @@ Widget Function(
   Animation<double> secondaryAnimation,
   Widget child,
 ) createKyPageTransition({
-  KyTransition? transition,
-  KyTransition defaultTransition = KyTransition.ios,
+  KyTransition transition = KyTransition.none,
 }) {
   Widget curry(
     BuildContext context,
@@ -15,8 +14,8 @@ Widget Function(
     Animation<double> secondaryAnimation,
     Widget child,
   ) {
-    return KySlideAnimation(
-      transition: transition ?? defaultTransition,
+    return KyPageAnimation(
+      transition: transition,
       animation: animation,
       secondaryAnimation: secondaryAnimation,
       child: child,

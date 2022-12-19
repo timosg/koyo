@@ -1,7 +1,7 @@
 part of animations;
 
-class KySlideAnimation extends StatelessWidget {
-  const KySlideAnimation({
+class KyPageAnimation extends StatelessWidget {
+  const KyPageAnimation({
     super.key,
     required this.child,
     required this.animation,
@@ -15,18 +15,18 @@ class KySlideAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// [KyPageTransition.none]
+    if (transition == KyTransition.none) {
+      return child;
+    }
+
     /// [KyPageTransition.fade]
     if (transition == KyTransition.fade) {
       return FadeTransition(opacity: animation, child: child);
     }
 
-    /// [KyPageTransition.rightToLeft] [KyPageTransition.leftToRight]
-    /// [KyPageTransition.topToBottom] [KyPageTransition.bottomToTop]
-    final Animation<Offset> primaryPositionAnimation;
-    final Animation<Offset> secondaryPositionAnimation;
-    final Animation<Decoration> primaryShadowAnimation;
-
-    if (transition == KyTransition.ios) {
+    /// [KyPageTransition.cupertino]
+    if (transition == KyTransition.cupertino) {
       return CupertinoPageTransition(
         primaryRouteAnimation: animation,
         secondaryRouteAnimation: secondaryAnimation,
@@ -34,6 +34,12 @@ class KySlideAnimation extends StatelessWidget {
         child: child,
       );
     }
+
+    /// [KyPageTransition.rightToLeft] [KyPageTransition.leftToRight]
+    /// [KyPageTransition.topToBottom] [KyPageTransition.bottomToTop]
+    final Animation<Offset> primaryPositionAnimation;
+    final Animation<Offset> secondaryPositionAnimation;
+    final Animation<Decoration> primaryShadowAnimation;
 
     primaryPositionAnimation = CurvedAnimation(
       parent: animation,

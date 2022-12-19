@@ -1,3 +1,10 @@
+## 0.2.13
+
+- Added none key to transition
+- Updated pages & transitions
+- Renamed some stuff
+- Small bugfixese
+
 ## 0.2.12
 
 - Added ios transition
