@@ -54,6 +54,20 @@ class KySlideAnimation extends StatelessWidget {
                   : _rightToLeftTween,
     );
 
+    return CupertinoPageTransition(
+      primaryRouteAnimation: animation,
+      secondaryRouteAnimation: secondaryAnimation,
+      child: child,
+      linearTransition: true,
+    );
+
+    // return CupertinoPageTransitionsBuilder(
+    //   primaryPositionAnimation: primaryPositionAnimation,
+    //   secondaryPositionAnimation: secondaryPositionAnimation,
+    //   primaryShadowAnimation: primaryShadowAnimation,
+    //   child: child,
+    // );
+
     primaryShadowAnimation = CurvedAnimation(
       parent: animation,
       curve: Curves.linear,
