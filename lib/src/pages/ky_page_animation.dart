@@ -6,7 +6,7 @@ Widget Function(
   Animation<double> secondaryAnimation,
   Widget child,
 ) createKyPageAnimation({
-  KyTransition? transition,
+  KyPageExtra? extra,
   KyTransition defaultTransition = KyTransition.rightToLeft,
 }) {
   Widget curry(
@@ -16,7 +16,7 @@ Widget Function(
     Widget child,
   ) {
     return KySlideAnimation(
-      transition: transition ?? defaultTransition,
+      transition: extra?.transition ?? defaultTransition,
       animation: animation,
       secondaryAnimation: secondaryAnimation,
       child: child,
