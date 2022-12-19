@@ -1,3 +1,8 @@
+## 0.2.12
+
+- Added ios transition
+- Updated some defaults
+
 ## 0.2.11
 
 - Reduced shadow on transition
