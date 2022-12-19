@@ -1,3 +1,7 @@
+## 0.2.14
+
+- Removed Pages & related things
+
 ## 0.2.13
 
 - Added none key to transition

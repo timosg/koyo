@@ -3,6 +3,5 @@ library koyo;
 export 'src/core.dart';
 export 'src/enums.dart';
 export 'src/extensions/ky_extensions.dart';
-export 'src/pages.dart';
 export 'src/types.dart';
 export 'src/widgets.dart';
