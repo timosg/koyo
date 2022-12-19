@@ -1,29 +1,4 @@
-part of widgets;
-
-final Animatable<Offset> _leftToRightTween = Tween<Offset>(
-  begin: const Offset(-1, 0),
-  end: Offset.zero,
-);
-
-final Animatable<Offset> _rightToLeftTween = Tween<Offset>(
-  begin: const Offset(1, 0),
-  end: Offset.zero,
-);
-
-final Animatable<Offset> _topToBottomTween = Tween<Offset>(
-  begin: const Offset(0, -1),
-  end: Offset.zero,
-);
-
-final Animatable<Offset> _bottomToTopTween = Tween<Offset>(
-  begin: const Offset(0, 1),
-  end: Offset.zero,
-);
-
-final Animatable<Offset> _zeroTween = Tween<Offset>(
-  begin: Offset.zero,
-  end: Offset.zero,
-);
+part of pages;
 
 class KySlideAnimation extends StatelessWidget {
   const KySlideAnimation({
@@ -38,21 +13,8 @@ class KySlideAnimation extends StatelessWidget {
   final Animation<double> secondaryAnimation;
   final KyTransition transition;
 
-  // ignore: sort_constructors_first
-  const KySlideAnimation.create({
-    super.key,
-    required this.child,
-    required this.animation,
-    required this.secondaryAnimation,
-    required this.transition,
-  });
-
   @override
   Widget build(BuildContext context) {
-    return createKyPageTransition();
-  }
-
-  Widget createKyPageTransition() {
     /// [KyPageTransition.fade]
     if (transition == KyTransition.fade) {
       return FadeTransition(opacity: animation, child: child);

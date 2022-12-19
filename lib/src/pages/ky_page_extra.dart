@@ -1,4 +1,4 @@
-part of models;
+part of pages;
 
 class KyPageExtra<T extends Object> {
   KyPageExtra({
