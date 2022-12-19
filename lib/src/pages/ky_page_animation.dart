@@ -1,20 +1,20 @@
 part of pages;
 
-Widget Function({
-  required BuildContext context,
-  required Animation<double> animation,
-  required Animation<double> secondaryAnimation,
-  required Widget child,
-}) createKyPageAnimation({
+Widget Function(
+  BuildContext context,
+  Animation<double> animation,
+  Animation<double> secondaryAnimation,
+  Widget child,
+) createKyPageAnimation({
   KyTransition? transition,
   KyTransition? defaultTransition,
 }) {
-  Widget curry({
-    required BuildContext context,
-    required Animation<double> animation,
-    required Animation<double> secondaryAnimation,
-    required Widget child,
-  }) {
+  Widget curry(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
     return KySlideAnimation(
       transition: transition ?? defaultTransition ?? KyTransition.rightToLeft,
       animation: animation,
