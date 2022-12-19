@@ -9,7 +9,7 @@ Widget Function({
   KyTransition? transition,
   KyTransition? defaultTransition,
 }) {
-  KySlideAnimation curry({
+  Widget curry({
     required BuildContext context,
     required Animation<double> animation,
     required Animation<double> secondaryAnimation,
