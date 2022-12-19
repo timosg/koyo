@@ -1,4 +1,4 @@
-part of pages;
+part of animations;
 
 class KySlideAnimation extends StatelessWidget {
   const KySlideAnimation({

@@ -122,13 +122,10 @@ GoRoute(
         return CustomTransitionPage<void>(
             key: state.pageKey,
             child: const Screen(),
-            transitionsBuilder: (_, animatiosecondaryAnimation, child) =>
-                    KySlideAnimation(
-            transition: extra.transition ?? KyTransition.leftToRight, // Provide a default transition
-            animation: animation,
-            secondaryAnimation: secondaryAnimation,
-            child: child,
-            ),
+            transitionsBuilder: createKyPageAnimation(
+                transition: extra.transition,
+                defaultTransition: KyTransition.fade,
+            ), // Use [createKyPageAnimation] to build the custom ky transition
         );
     },
 ),

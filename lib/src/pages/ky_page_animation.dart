@@ -5,7 +5,7 @@ Widget Function(
   Animation<double> animation,
   Animation<double> secondaryAnimation,
   Widget child,
-) createKyPageAnimation({
+) createKyPageTransition({
   KyTransition? transition,
   KyTransition defaultTransition = KyTransition.rightToLeft,
 }) {

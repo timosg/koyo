@@ -2,6 +2,7 @@
 
 - Reduced shadow on transition
 - Updated docs
+- Added `createKyPageTransition` for go_router compatibility
 
 ## 0.2.10
 

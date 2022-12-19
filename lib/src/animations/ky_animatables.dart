@@ -1,4 +1,4 @@
-part of pages;
+part of animations;
 
 final Animatable<Offset> _leftToRightTween = Tween<Offset>(
   begin: const Offset(-1, 0),
