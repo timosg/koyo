@@ -3,10 +3,9 @@
 part of core;
 
 class _KyBreakpoints {
-  final double xs = 576;
+  final double xs = 640;
   final double sm = 768;
-  final double md = 992;
-  final double lg = 1200;
-  final double xl = 1400;
-  final double xxl = 1536;
+  final double md = 1024;
+  final double lg = 1280;
+  final double xl = 1536;
 }

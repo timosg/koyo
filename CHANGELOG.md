@@ -1,3 +1,8 @@
+## 0.3.0
+
+- Updated design system
+- Added custom values
+
 ## 0.2.14
 
 - Removed Pages & related things

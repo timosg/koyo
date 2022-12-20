@@ -8,7 +8,6 @@ abstract class _KyRadiusValue {
   static const double md = 8;
   static const double lg = 16;
   static const double xl = 32;
-  static const double xxl = 64;
 }
 
 class _KyRadius {
@@ -17,17 +16,18 @@ class _KyRadius {
   late final double md = _KyRadiusValue.md;
   late final double lg = _KyRadiusValue.lg;
   late final double xl = _KyRadiusValue.xl;
-  late final double xxl = _KyRadiusValue.xxl;
 
   late final circular = _KyRadiusCircular();
 }
 
 // ** Utility classes **
 class _KyRadiusCircular {
+  // ** Pre defined spacings **
   late final BorderRadius xs = BorderRadius.circular(_KyRadiusValue.xs);
   late final BorderRadius sm = BorderRadius.circular(_KyRadiusValue.sm);
   late final BorderRadius md = BorderRadius.circular(_KyRadiusValue.md);
   late final BorderRadius lg = BorderRadius.circular(_KyRadiusValue.lg);
   late final BorderRadius xl = BorderRadius.circular(_KyRadiusValue.xl);
-  late final BorderRadius xxl = BorderRadius.circular(_KyRadiusValue.xxl);
+  // *+ Custom spacings **
+  BorderRadius value(double value) => BorderRadius.circular(value);
 }
