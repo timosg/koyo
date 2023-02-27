@@ -1,3 +1,8 @@
+## 0.4.0
+
+- Removed restricting values
+- Removed complexity
+
 ## 0.3.0
 
 - Updated design system

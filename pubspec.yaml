@@ -1,6 +1,6 @@
 name: koyo
 description: A Flutter utility library that enables faster development and less boilerplate for specific use cases.
-version: 0.3.0
+version: 0.4.0
 repository: https://github.com/timosg/koyo/tree/main
 issue_tracker: https://github.com/timosg/koyo/issues
 homepage: https://github.com/timosg/koyo

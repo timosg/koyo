@@ -64,6 +64,8 @@ class _KyPlatformInfo {
     return deviceModel ?? 'unknown';
   }
 
+  Stream<InternetConnectionStatus> get listenToConnection =>
+      InternetConnectionCheckerPlus().onStatusChange;
   Future<bool> get isConnected async =>
       InternetConnectionCheckerPlus().hasConnection;
   Future<bool> get isDisconnected async => (await isConnected) == false;

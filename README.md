@@ -61,16 +61,11 @@ Ky.spacing
 
 And now the widgets! 🔥
 
-⭐ Buttons
-
-```dart
-KyButton.simple(...)
-```
-
 ⭐ Feedback
 
 ```dart
 KyLoader(...)
+KyLoaderOverlay(...)
 ```
 
 ⭐ Layout
@@ -78,7 +73,6 @@ KyLoader(...)
 ```dart
 KyColumn(...)
 KyRow(...)
-KyList(...)
 KySpace(...)
 ```
 

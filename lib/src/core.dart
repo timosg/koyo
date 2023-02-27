@@ -18,7 +18,6 @@ part 'styles/ky_spacing.dart';
 // ** Core utils
 part 'utils/ky_debouncer.dart';
 part 'utils/ky_delayer.dart';
-part 'utils/ky_duration.dart';
 part 'utils/ky_orientation.dart';
 part 'utils/ky_platform_info.dart';
 
@@ -33,7 +32,6 @@ class _Ky {
   final orientation = _KyOrientation();
   final platform = _KyPlatformInfo();
   final rnd = Random(DateTime.now().millisecondsSinceEpoch);
-  final duration = _KyDuration();
   final delayer = _KyDelayer();
   // ** Styles
   final spacing = _KySpacing();
