@@ -22,7 +22,7 @@ class KyLoadingOverlay extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final mediaQuery = MediaQuery.of(context);
-    final backgroundColor = overlayColor ?? theme.backgroundColor;
+    final backgroundColor = overlayColor ?? theme.colorScheme.background;
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Stack(
