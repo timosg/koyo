@@ -1,3 +1,7 @@
+## 0.4.3
+
+- Added color to KyLoader
+
 ## 0.4.2
 
 - Added better default values for spacings

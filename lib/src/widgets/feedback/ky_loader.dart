@@ -1,18 +1,21 @@
 part of widgets;
 
 class KyLoader extends StatelessWidget {
-  const KyLoader({super.key, this.androidScale = 0.5});
+  const KyLoader({super.key, this.androidScale = 0.5, this.color});
 
   final double? androidScale;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
     if (Platform.isAndroid) {
       return Transform.scale(
         scale: androidScale,
-        child: const CircularProgressIndicator(),
+        child: CircularProgressIndicator(backgroundColor: color),
       );
     }
-    return const CircularProgressIndicator.adaptive();
+    return CircularProgressIndicator.adaptive(
+      backgroundColor: color,
+    );
   }
 }
