@@ -1,3 +1,9 @@
+## 0.4.2
+
+- Added better default values for spacings
+- Added better default values for radius
+- Removed complexity from shadows
+
 ## 0.4.1
 
 - Fixed dx

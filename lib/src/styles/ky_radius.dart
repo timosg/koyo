@@ -2,22 +2,35 @@
 
 part of core;
 
+abstract class _KyRadiusValue {
+  static const double xs = 2;
+  static const double sm = 4;
+  static const double md = 8;
+  static const double lg = 16;
+  static const double xl = 32;
+  static const double full = 9999;
+}
+
 class _KyRadius {
-  BorderRadius circular(double value) => BorderRadius.circular(value);
-  BorderRadius left(double value) => BorderRadius.only(
-        topLeft: Radius.circular(value),
-        bottomLeft: Radius.circular(value),
-      );
-  BorderRadius right(double value) => BorderRadius.only(
-        bottomRight: Radius.circular(value),
-        topRight: Radius.circular(value),
-      );
-  BorderRadius top(double value) => BorderRadius.only(
-        topLeft: Radius.circular(value),
-        topRight: Radius.circular(value),
-      );
-  BorderRadius bottom(double value) => BorderRadius.only(
-        bottomLeft: Radius.circular(value),
-        bottomRight: Radius.circular(value),
-      );
+  late final double xs = _KyRadiusValue.xs;
+  late final double sm = _KyRadiusValue.sm;
+  late final double md = _KyRadiusValue.md;
+  late final double lg = _KyRadiusValue.lg;
+  late final double xl = _KyRadiusValue.xl;
+  late final double full = _KyRadiusValue.full;
+
+  late final circular = _KyRadiusCircular();
+}
+
+// ** Utility classes **
+class _KyRadiusCircular {
+  // ** Pre defined spacings **
+  late final BorderRadius xs = BorderRadius.circular(_KyRadiusValue.xs);
+  late final BorderRadius sm = BorderRadius.circular(_KyRadiusValue.sm);
+  late final BorderRadius md = BorderRadius.circular(_KyRadiusValue.md);
+  late final BorderRadius lg = BorderRadius.circular(_KyRadiusValue.lg);
+  late final BorderRadius xl = BorderRadius.circular(_KyRadiusValue.xl);
+  late final BorderRadius full = BorderRadius.circular(_KyRadiusValue.full);
+  // *+ Custom spacings **
+  BorderRadius value(double value) => BorderRadius.circular(value);
 }
