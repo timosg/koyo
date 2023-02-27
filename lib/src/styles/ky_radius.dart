@@ -3,11 +3,21 @@
 part of core;
 
 class _KyRadius {
-  late final circular = _KyRadiusCircular();
-}
-
-// ** Utility classes **
-class _KyRadiusCircular {
-  // *+ Custom spacings **
-  BorderRadius value(double value) => BorderRadius.circular(value);
+  BorderRadius circular(double value) => BorderRadius.circular(value);
+  BorderRadius left(double value) => BorderRadius.only(
+        topLeft: Radius.circular(value),
+        bottomLeft: Radius.circular(value),
+      );
+  BorderRadius right(double value) => BorderRadius.only(
+        bottomRight: Radius.circular(value),
+        topRight: Radius.circular(value),
+      );
+  BorderRadius top(double value) => BorderRadius.only(
+        topLeft: Radius.circular(value),
+        topRight: Radius.circular(value),
+      );
+  BorderRadius bottom(double value) => BorderRadius.only(
+        bottomLeft: Radius.circular(value),
+        bottomRight: Radius.circular(value),
+      );
 }
