@@ -3,9 +3,14 @@ part of core;
 class _KyOrientation {
   final portrait = _Portrait();
   final landscape = _Landscape();
-  void get all {
-    portrait.all();
-    landscape.all();
+
+  void all() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   final orientation = Orientation;

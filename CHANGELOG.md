@@ -1,3 +1,7 @@
+## 0.4.4
+
+- Fixed Orientation helper & Shadows
+
 ## 0.4.3
 
 - Added color to KyLoader
