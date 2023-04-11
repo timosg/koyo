@@ -11,7 +11,6 @@ import 'package:flutter/services.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
 // ** Core styles
-part 'styles/ky_breakpoints.dart';
 part 'styles/ky_radius.dart';
 part 'styles/ky_shadows.dart';
 part 'styles/ky_spacing.dart';
@@ -37,5 +36,4 @@ class _Ky {
   final spacing = _KySpacing();
   final radius = _KyRadius();
   final shadows = _KyShadows();
-  final breakpoints = _KyBreakpoints();
 }

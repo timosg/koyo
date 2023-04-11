@@ -1,3 +1,8 @@
+## 0.5.0
+
+- Removed Breakpoints
+- Removed final from config variables
+
 ## 0.4.4
 
 - Fixed Orientation helper & Shadows

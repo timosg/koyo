@@ -13,13 +13,13 @@ abstract class _KySpacingValue {
 }
 
 class _KySpacing {
-  late final double xxs = _KySpacingValue.xxs;
-  late final double xs = _KySpacingValue.xs;
-  late final double sm = _KySpacingValue.sm;
-  late final double md = _KySpacingValue.md;
-  late final double lg = _KySpacingValue.lg;
-  late final double xl = _KySpacingValue.xl;
-  late final double xxl = _KySpacingValue.xxl;
+  late double xxs = _KySpacingValue.xxs;
+  late double xs = _KySpacingValue.xs;
+  late double sm = _KySpacingValue.sm;
+  late double md = _KySpacingValue.md;
+  late double lg = _KySpacingValue.lg;
+  late double xl = _KySpacingValue.xl;
+  late double xxl = _KySpacingValue.xxl;
 
   late final all = _KySpacingAll();
   late final left = _KySpacingLeft();

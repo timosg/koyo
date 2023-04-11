@@ -12,12 +12,12 @@ abstract class _KyRadiusValue {
 }
 
 class _KyRadius {
-  late final double xs = _KyRadiusValue.xs;
-  late final double sm = _KyRadiusValue.sm;
-  late final double md = _KyRadiusValue.md;
-  late final double lg = _KyRadiusValue.lg;
-  late final double xl = _KyRadiusValue.xl;
-  late final double full = _KyRadiusValue.full;
+  late double xs = _KyRadiusValue.xs;
+  late double sm = _KyRadiusValue.sm;
+  late double md = _KyRadiusValue.md;
+  late double lg = _KyRadiusValue.lg;
+  late double xl = _KyRadiusValue.xl;
+  late double full = _KyRadiusValue.full;
 
   late final circular = _KyRadiusCircular();
 }
