@@ -1,6 +1,6 @@
 # Koyo a "Flutter utility library"
 
-This library is mainly used by hobby projects and apps by [Wydget](https://wydget.de).
+This library is mainly used by hobby projects.
 
 The focus is on the following points:
 
