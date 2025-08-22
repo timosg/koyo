@@ -8,10 +8,7 @@ class _KyPlatformInfo {
     TargetPlatform.linux,
   ];
 
-  final _mobilePlatforms = [
-    TargetPlatform.android,
-    TargetPlatform.iOS,
-  ];
+  final _mobilePlatforms = [TargetPlatform.android, TargetPlatform.iOS];
 
   bool get isWeb => kIsWeb;
   bool get isDesktop => _desktopPlatforms.contains(defaultTargetPlatform);
@@ -64,9 +61,9 @@ class _KyPlatformInfo {
     return deviceModel ?? 'unknown';
   }
 
-  Stream<InternetConnectionStatus> get listenToConnection =>
-      InternetConnectionCheckerPlus().onStatusChange;
+  Stream<InternetStatus> get listenToConnection =>
+      InternetConnection().onStatusChange;
   Future<bool> get isConnected async =>
-      InternetConnectionCheckerPlus().hasConnection;
+      await InternetConnection().hasInternetAccess;
   Future<bool> get isDisconnected async => (await isConnected) == false;
 }
