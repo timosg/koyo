@@ -1,3 +1,6 @@
+## 0.6.0
+- Upgrade Dependencies
+
 ## 0.5.0
 
 - Removed Breakpoints
